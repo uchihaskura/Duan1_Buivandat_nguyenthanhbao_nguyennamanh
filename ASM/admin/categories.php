@@ -23,62 +23,57 @@
 
     <body>
         <div class="wrapper">
-            <nav id="sidebar" class="sidebar js-sidebar">
+        <nav id="sidebar" class="sidebar js-sidebar">
                 <div class="sidebar-content js-simplebar">
-                    <a class="sidebar-brand" href="index.php">
+                    <a class="sidebar-brand" href="admin.php">
                         <span class="align-middle">ADMIN TB STORE</span>
                     </a>
+                    <li class="sidebar-item active">
+                        <a class="sidebar-link" href="admin.php">
+                            <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Bảng Điều
+                                Khiển</span>
+                        </a>
+                    </li>
 
                     <ul class="sidebar-nav">
                         <li class="sidebar-header">
-                            Pages
-                        </li>
-
-                        <li class="sidebar-item active">
-                            <a class="sidebar-link" href="index.php">
-                                <i class="align-middle" data-feather="sliders"></i> <span
-                                    class="align-middle">Quản</span>
-                            </a>
+                            Quản Lý
                         </li>
 
                         <li class="sidebar-item">
                             <a class="sidebar-link" href="categories.php">
-                                <i class="align-middle" data-feather="user"></i> <span
-                                    class="align-middle">Quản Lý Loại Hàng</span>
+                                <i class="align-middle" data-feather="book"></i> <span class="align-middle">Quản Lý Loại
+                                    Hàng </span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="product.php">
+                                <i class="align-middle" data-feather="book"></i> <span class="align-middle">Quản Lý
+                                    Sản Phẩm</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="orders.php">
+                                <i class="align-middle" data-feather="book"></i> <span class="align-middle">Quản Lý 
+                                    Đơn Hàng</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="cmt.php">
+                                <i class="align-middle" data-feather="book"></i> <span class="align-middle">Quản Lý 
+                                    Bình Luận</span>
                             </a>
                         </li>
 
                         <li class="sidebar-item">
                             <a class="sidebar-link" href="pages-sign-up.php">
                                 <i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Sign
-                                    Up</span>
+                                    In</span>
                             </a>
                         </li>
 
-                        <li class="sidebar-item">
-                            <a class="sidebar-link" href="product-management.php">
-                                <i class="align-middle" data-feather="book"></i> <span
-                                    class="align-middle">Product-Management</span>
-                            </a>
-                        </li>
 
-                        <li class="sidebar-header">
-                            Management
-                        </li>
-
-                        <li class="sidebar-item">
-                            <a class="sidebar-link" href="ui-buttons.php">
-                                <i class="align-middle" data-feather="square"></i> <span
-                                    class="align-middle">Customer-Management</span>
-                            </a>
-                        </li>
-
-                        <li class="sidebar-item">
-                            <a class="sidebar-link" href="cmt.php">
-                                <i class="align-middle" data-feather="check-square"></i> <span
-                                    class="align-middle">Quản Lý Bình Luận</span>
-                            </a>
-                        </li>
             </nav>
 
             <div class="main">

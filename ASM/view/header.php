@@ -151,7 +151,6 @@
                                     </a>
                                     <input type="checkbox" id="drop-5"/>';
                                     echo '<ul>
-                                            <li $admin><a href="index.php?page=admin">Quản Trị Website</a></li>
                                             <li><a href="index.php?page=user">Tài khoản</a></li>
                                             <li><a href="index.php?page=logout">Đăng Xuất</a></li>
                                         </ul>';

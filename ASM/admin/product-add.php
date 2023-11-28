@@ -124,7 +124,7 @@ $page = $_GET['page'] ?? "theloai";
                 }else{
                     $stmt = $conn -> prepare("INSERT INTO product(name, price, discount, img, id_cate, /*view,*/ create_at, update_at, description)
                     VALUES ('$name', $price, $discount, '$img', $id_cate, /*$view,*/ CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, '$description')");
-                    $stmt -> execute();
+                    $stmt->execute();
                     header('Location: admin.php?page=product'); /*die()*/;
                 }
             }else $msg="Vui lòng nhập đầy đủ thông tin";         

@@ -25,11 +25,11 @@
         <div class="wrapper">
             <nav id="sidebar" class="sidebar js-sidebar">
                 <div class="sidebar-content js-simplebar">
-                    <a class="sidebar-brand" href="index.php">
-                        <span class="align-middle">ADMIN TB STORE</span>
+                    <a class="sidebar-brand" href="admin.php">
+                        <span class="align-middle"> ADMIN TB STORE</span>
                     </a>
                     <li class="sidebar-item active">
-                        <a class="sidebar-link" href="index.php">
+                        <a class="sidebar-link" href="admin.php">
                             <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Bảng Điều
                                 Khiển</span>
                         </a>
@@ -41,28 +41,28 @@
                         </li>
 
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="quanlyloaihang.php">
+                            <a class="sidebar-link" href="categories.php">
                                 <i class="align-middle" data-feather="book"></i> <span class="align-middle">Quản Lý Loại
                                     Hàng </span>
                             </a>
                         </li>
 
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="quanlysanpham.php">
+                            <a class="sidebar-link" href="product.php">
                                 <i class="align-middle" data-feather="book"></i> <span class="align-middle">Quản Lý
                                     Sản Phẩm</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="quanlybinhluan.php">
-                                <i class="align-middle" data-feather="book"></i> <span class="align-middle">Quản Lý Loại
-                                    Bình Luận</span>
+                            <a class="sidebar-link" href="orders.php">
+                                <i class="align-middle" data-feather="book"></i> <span class="align-middle">Quản Lý 
+                                    Đơn Hàng</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="product-management.php">
-                                <i class="align-middle" data-feather="book"></i> <span class="align-middle">Quản Lý Tài
-                                    Khoản</span>
+                            <a class="sidebar-link" href="cmt.php">
+                                <i class="align-middle" data-feather="book"></i> <span class="align-middle">Quản Lý 
+                                    Bình Luận</span>
                             </a>
                         </li>
 
