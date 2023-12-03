@@ -15,8 +15,7 @@ $stmt = $conn->query("SELECT * FROM categories where deleted = 0");
                 <th>Trạng Thái</th>
                 <th>Danh Sách Sản Phẩm</th>
                 <th>
-                    <a class="btn btn-success" href="javascript:void(0);" id="hide-btn">Ẩn(<strong id="length">0</strong>)</a>
-                    
+                    <a class="btn btn-success" href="javascript:void(0);" id="hide-btn">Ẩn(<strong id="length">0</strong>)</a>                   
                 </th>
                 <th>
                     <a class="btn btn-success" href="javascript:void(0);" id="show-btn">Hiện(<strong id="length">0</strong>)</a>
@@ -51,15 +50,9 @@ $stmt = $conn->query("SELECT * FROM categories where deleted = 0");
         </tbody>
     </table>
 </div>
-
-<!-- Nút "Thùng Rác" -->
-<div class="trash-button-container">
-    <a class="btn btn-success" href="admin.php?page=categories-trash">Thùng Rác</a>
-</div>
 <div class="add-button-container">
     <a class="btn btn-success" href="admin.php?page=categories-add">Thêm Mới</a>
 </div>
-
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <style>
     #hide-btn, #show-btn, #delete-btn {

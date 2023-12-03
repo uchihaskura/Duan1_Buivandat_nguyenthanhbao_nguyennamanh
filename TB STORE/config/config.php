@@ -2,5 +2,5 @@
     define('SVName', 'localhost');
     define('USRname', 'root');
     define('DBpass', 'mysql');
-    define('DBName', 'tbstore');
+    define('DBName', 'giaythethao');
 ?>

@@ -22,12 +22,6 @@
     <li class="nav-item">
         <a class="nav-link" data-toggle="tab" href="admin.php?page=user">Khách Hàng</a>
     </li>
-    <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="admin.php?page=blog_categories">Loại Bài Viết</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="admin.php?page=blog">Bài Viết</a>
-    </li>
     
     <li class="nav-item">
         <a class="nav-link text-danger" href="#">Chào <?php echo $_COOKIE['usr']?></a>

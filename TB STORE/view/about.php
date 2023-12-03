@@ -37,17 +37,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
     <!-- //Fonts -->
-            <style>
-                .main-banner {
-                    background: #255C45;
-                    height: 100px;
-                    animation: none;
-                }
-                .banner-info{
-                    display: none;
-                }
-            </style>
-        
+    <style>
+        .main-banner {
+            background: #255C45;
+            height: 100px;
+            animation: none;
+        }
+
+        .banner-info {
+            display: none;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -64,8 +65,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <section class="hand-crafted py-5">
         <div class="container">
             <div class="inner-sec py-md-5 px-lg-5">
-                <h3 class="tittle text-center"><span class="sub-tittle"></span> Chào Mừng Đến Với Mái Tóc Xinh</h3>
-                <p class="mb-4 text-center px-lg-4"> Đây là tài liệu trình bày quá trình phát triển của dự án Website cung cấp sản phẩm chăm sóc tóc MÁI TÓC XINH, website được hướng đến những người đang có nhu cầu tìm kiếm một nơi để mua sắm các sản phẩm để phục vụ cho mái tóc của bạn nhưng chưa tìm được nơi nào uy tín để thực hiện điều đó thì MÁI TÓC XINH sẽ giúp bạn</p>
+                <h3 class="tittle text-center"><span class="sub-tittle"></span> Chào Mừng Đến Với TB STORE</h3>
+                <p class="mb-4 text-center px-lg-4"> Đây là tài liệu trình bày quá trình phát triển của dự án Website cung cấp sản phẩm của TB STORE, website được hướng đến những người đang có nhu cầu tìm kiếm một nơi để mua sắm các sản phẩm để phục vụ cho đôi chân của bạn nhưng chưa tìm được nơi nào uy tín để thực hiện điều đó thì TB STORE sẽ giúp bạn</p>
             </div>
         </div>
     </section>
@@ -78,20 +79,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="col-md-4 gd-bottom mt-lg-4">
                     <div class="bottom-gd p-lg-5 p-4">
                         <h3 class="my-3">
-                        Sản Phẩm Chăm Sóc Đa Dạng:</h3>
-                        <p>Chúng tôi cung cấp một loạt sản phẩm chăm sóc tóc chất lượng, từ dầu gội chuyên biệt cho nam giới đến gel tạo kiểu và sáp vuốt tóc. Sản phẩm của chúng tôi giúp tăng cường độ ẩm, bóng mượt và độ dẻo dai cho tóc của bạn, giữ cho kiểu tóc luôn đẹp và duy trì được suốt cả ngày.</p>
+                            Sản Phẩm Đa Dạng:</h3>
+                        <p>Chúng tôi cung cấp một loạt sản phẩm chất lượng.</p>
                     </div>
                 </div>
                 <div class="col-md-4 gd-bottom mt-lg-4">
                     <div class="bottom-gd2-active p-lg-5 p-4">
                         <h3 class="my-3">Tư Vấn Cá Nhân Hóa:</h3>
-                        <p>Nhận được sự tư vấn chăm sóc tóc riêng biệt từ đội ngũ chuyên gia của chúng tôi. Chúng tôi không chỉ cung cấp dịch vụ, mà còn lắng nghe mong muốn của bạn và đề xuất giải pháp chăm sóc tóc tốt nhất cho tình trạng và phong cách tóc của bạn. Sự chăm sóc tận tâm và tùy chỉnh là cam kết của chúng tôi.</p>
+                        <p>Nhận được sự tư vấn chăm sóc riêng biệt từ đội ngũ chuyên gia của chúng tôi. Chúng tôi không chỉ cung cấp dịch vụ.</p>
                     </div>
                 </div>
                 <div class="col-md-4 gd-bottom mt-lg-4">
                     <div class="bottom-gd p-lg-5 p-4">
                         <h3 class="my-3">Lựa Chọn Hoàn Hảo</h3>
-                        <p>Chúng tôi không chỉ là cửa hàng chăm sóc tóc, chúng tôi là đối tác đồng hành trong hành trình chăm sóc và tôn vinh vẻ đẹp nam tính. Khi bạn chọn sản phẩm của chúng tôi, bạn chọn lựa sự chăm sóc toàn diện từ chúng tôi. Dẫn đầu với các dòng sản phẩm chăm sóc tóc hàng đầu.</p>
+                        <p>Chúng tôi không chỉ là cửa hàng giày, Khi bạn chọn sản phẩm của chúng tôi.</p>
                     </div>
                 </div>
 
@@ -105,55 +106,54 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="row banner-grids">
                 <div class="col-md-6 banner-image">
                     <div>
-                        <img src="../uploads_product/s135.png"  class="img-fluid image1">
-
+                        <img src="./assets/images/logotbstore.png" class="img-fluid image1" height="100"">
                     </div>
 
                 </div>
-                <div class="col-md-6 last-img pl-lg-5 p-3">
-                    <h3 class="tittle mb-lg-5 mb-3"><span class="sub-tittle"></span>Giảm Giá Tới 50%</h3>
-                    <p class="mb-4">Giảm giá lớn nhất năm - Tiết kiệm tới 50% khi mua sắm ngay hôm nay!</p>
-                    <ul class="tic-info list-unstyled">
-                        <li>
+                <div class=" col-md-6 last-img pl-lg-5 p-3">
+                        <h3 class="tittle mb-lg-5 mb-3"><span class="sub-tittle"></span>Giảm Giá Tới 50%</h3>
+                        <p class="mb-4">Giảm giá lớn nhất năm - Tiết kiệm tới 50% khi mua sắm ngay hôm nay!</p>
+                        <ul class="tic-info list-unstyled">
+                            <li>
 
-                            <span class="fa fa-check mr-2">Cơ hội mua sắm không thể bỏ qua cho mọi người.</span> 
+                                <span class="fa fa-check mr-2">Cơ hội mua sắm không thể bỏ qua cho mọi người.</span>
 
-                        </li>
-                         <li>
+                            </li>
+                            <li>
 
-                            <span class="fa fa-check mr-2">Mua sắm thông minh, tiết kiệm hơn cùng chúng tôi.</span> 
+                                <span class="fa fa-check mr-2">Mua sắm thông minh, tiết kiệm hơn cùng chúng tôi.</span>
 
-                        </li>
-                         <li>
+                            </li>
+                            <li>
 
-                            <span class="fa fa-check mr-2">Giao hàng miễn phí, giá trị tăng lên đáng kinh ngạc.</span> 
+                                <span class="fa fa-check mr-2">Giao hàng miễn phí, giá trị tăng lên đáng kinh ngạc.</span>
 
-                        </li>                        
-                        <li>
+                            </li>
+                            <li>
 
-                            <span class="fa fa-check mr-2">Khuyến khích hành động nhanh chóng để tận dụng ưu đãi.</span> 
+                                <span class="fa fa-check mr-2">Khuyến khích hành động nhanh chóng để tận dụng ưu đãi.</span>
 
-                        </li>
-                        <li>
+                            </li>
+                            <li>
 
-                            <span class="fa fa-check mr-2">Khuyến khích khách hàng mua sắm thông minh và tiết kiệm.</span> 
+                                <span class="fa fa-check mr-2">Khuyến khích khách hàng mua sắm thông minh và tiết kiệm.</span>
 
-                        </li>
-                         <li>
+                            </li>
+                            <li>
 
-                            <span class="fa fa-check mr-2">Cơ hội mua sắm độc đáo - hành động ngay để nhận ưu đãi!</span> 
+                                <span class="fa fa-check mr-2">Cơ hội mua sắm độc đáo - hành động ngay để nhận ưu đãi!</span>
 
-                        </li>
-                        <li>
+                            </li>
+                            <li>
 
-                            <span class="fa fa-check mr-2">Cung cấp giao hàng miễn phí để tăng thêm giá trị cho khách hàng.</span> 
+                                <span class="fa fa-check mr-2">Cung cấp giao hàng miễn phí để tăng thêm giá trị cho khách hàng.</span>
 
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
 
+                    </div>
                 </div>
             </div>
-        </div>
     </section>
     <!-- //hand-crafted -->
     <!-- stats -->
@@ -167,45 +167,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </div>
                         <!-- .Icon ends here -->
                         <div class="service-content">
-                            <h4>DƯỠNG CHẤT TÓC</h4>
+                            <h4>Vệ sinh giày</h4>
                             <p class="serp">
-                            Dưỡng chất cần thiết cho mái tóc, mang lại độ bóng mượt tự nhiên và sức sống cho tóc từ gốc đến ngọn.
+                                Sử dụng một bàn chải hoặc khăn mềm để làm sạch bụi và bã nhờn trên bề mặt giày.
+                                Nếu giày làm từ vật liệu như da, bạn có thể sử dụng khăn ẩm để lau sạch.
                             </p>
                         </div>
                         <!-- .Service-content ends here -->
                     </div>
-                    <!-- .Services-box ends here -->
-
                     <div class="d-flex services-box ser-midd">
                         <div class="icon">
                             <span class="fa fa-bell-o"></span>
                         </div>
                         <!-- .Icon ends here -->
                         <div class="service-content">
-                            <h4>PHỤC HỒI KERATIN</h4>
+                            <h4>NHIỀU ƯU ĐÃI</h4>
                             <p class="serp">
-                            Sản phẩm phục hồi tóc hư tổn với keratin, giúp tóc trở nên khỏe mạnh, giảm gãy rụng và tăng độ đàn hồi.
+                            Cửa hàng cung cấp ưu đãi đặc biệt cho thành viên đăng ký hoặc khách hàng thường xuyên mua sắm.
                             </p>
                         </div>
                         <!-- .Service-content ends here -->
                     </div>
-                    <!-- .Services-box ends here -->
-                    <!-- .Services-box ends here -->
-
-                    <div class="d-flex services-box bx-4">
-                        <div class="icon">
-                            <span class="fa fa-line-chart"></span>
-                        </div>
-                        <!-- .Icon ends here -->
-                        <div class="service-content">
-                            <h4>CỦNG CỐ TÓC</h4>
-                            <p class="serp">
-                            Các sản phẩm tăng cường sức khỏe cho tóc với protein, giúp tóc chắc khỏe và giảm thiểu tổn thương.
-                            </p>
-                        </div>
-                        <!-- .Service-content ends here -->
-                    </div>
-                    <!-- .Services-box ends here -->
                 </div>
                 <div class="col-lg-6 ser-lt ser-right">
                     <div class="d-flex services-box">
@@ -214,9 +196,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </div>
                         <!-- .Icon ends here -->
                         <div class="service-content">
-                            <h4>KHÓA ẨM TÓC</h4>
+                            <h4>CHẤT LƯỢNG</h4>
                             <p class="serp">
-                            Giữ ẩm cho tóc với công thức đặc biệt, ngăn ngừa tóc trở nên khô và giữ ẩm suốt ngày dài.
+                            Các dòng sản phẩm chất lượng cao thường sử dụng chất liệu chịu lực, thoáng khí, và có khả năng đàn hồi tốt.
                             </p>
                         </div>
                         <!-- .Service-content ends here -->
@@ -229,9 +211,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </div>
                         <!-- .Icon ends here -->
                         <div class="service-content">
-                            <h4>SERUM TÓC BÓNG</h4>
+                            <h4>TRỢ GIÚP</h4>
                             <p class="serp">
-                            Serum giúp tăng cường độ bóng cho tóc, cho mái tóc trở nên bóng mượt và mềm mại, dễ dàng vào nếp
+                            Hỗ trợ khách hàng nhanh chóng và chuyên nghiệp giúp giải quyết vấn đề một cách hiệu quả, ngăn chặn tình trạng không hài lòng của khách hàng.
                             </p>
                         </div>
                         <!-- .Service-content ends here -->
@@ -239,19 +221,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <!-- .Services-box ends here -->
                     <!-- .Services-box ends here -->
 
-                    <div class="d-flex services-box bx-4">
-                        <div class="icon">
-                            <span class="fa fa-line-chart"></span>
-                        </div>
-                        <!-- .Icon ends here -->
-                        <div class="service-content">
-                            <h4>SỬA CHỮA VÀ BẢO VỆ</h4>
-                            <p class="serp">
-                            Sản phẩm chăm sóc tóc giúp sửa chữa và bảo vệ tóc khỏi các tác nhân gây hại từ môi trường, cho mái tóc khỏe mạnh từ bên trong.
-                            </p>
-                        </div>
-                        <!-- .Service-content ends here -->
-                    </div>
+
                     <!-- .Services-box ends here -->
                 </div>
             </div>
@@ -262,7 +232,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <section class="testimonials py-5">
         <div class="container">
             <div class="test-info text-center">
-                <h3 class="my-md-2 my-3">Nam Nam</h3>
+                <h3 class="my-md-2 my-3">TB STORE</h3>
 
                 <ul class="list-unstyled w3layouts-icons clients">
                     <li>
@@ -286,41 +256,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </a>
                     </li>
                 </ul>
-                <p><span class="fa fa-quote-left"></span>Hỗ trợ rất tốt <span class="fa fa-quote-right"></span></p>
+                <p><span class="fa fa-quote-left"></span> Hỗ trợ rất tốt <span class="fa fa-quote-right"></span></p>
 
             </div>
         </div>
     </section>
-    <!--//testimonials-->
-    <!--/ab -->
-    
-    <!-- //ab -->
-    <!-- brands -->
-    <section class="brands py-5" id="brands">
-        <div class="container py-lg-0">
-            <div class="row text-center brand-items">
-                <div class="col-sm-2 col-3">
-                    <a href="#"><span class="fa fa-connectdevelop" aria-hidden="true"></span></a>
-                </div>
-                <div class="col-sm-2 col-3">
-                    <a href="#"><span class="fa fa-empire" aria-hidden="true"></span></a>
-                </div>
-                <div class="col-sm-2 col-3">
-                    <a href="#"><span class="fa fa-ioxhost" aria-hidden="true"></span></a>
-                </div>
-                <div class="col-sm-2 col-3">
-                    <a href="#"><span class="fa fa-first-order" aria-hidden="true"></span></a>
-                </div>
-                <div class="col-sm-2 col-3 mt-sm-0 mt-4">
-                    <a href="#"><span class="fa fa-joomla" aria-hidden="true"></span></a>
-                </div>
-                <div class="col-sm-2 col-3 mt-sm-0 mt-4">
-                    <a href="#"><span class="fa fa-dropbox" aria-hidden="true"></span></a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- brands -->
+
 </body>
 
 </html>

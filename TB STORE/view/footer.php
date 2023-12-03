@@ -173,7 +173,7 @@
                             <i class="fa fa-map-marker"></i>
                             <div class="cta-text">
                                 <h4>Địa Chỉ</h4>
-                                <span>Thành Phố Hồ Chí Minh</span>
+                                <span>Thành Phố Cần Thơ</span>
                             </div>
                         </div>
                     </div>
@@ -191,7 +191,7 @@
                             <i class="fa fa-envelope-open"></i>
                             <div class="cta-text">
                                 <h4>Email</h4>
-                                <span>contact@maitocxinh.com</span>
+                                <span>contact@tbstore.com</span>
                             </div>
                         </div>
                     </div>
@@ -202,10 +202,7 @@
                     <div class="col-xl-4 col-lg-4 mb-50">
                         <div class="footer-widget">
                             <div class="footer-logo">
-                                <a href="index.html"><img src="assets/images/logo2.png" class="img-fluid" alt="logo"></a>
-                            </div>
-                            <div class="footer-text">
-                                <p>Dưỡng chất cần thiết cho mái tóc, mang lại độ bóng mượt tự nhiên và sức sống cho tóc từ gốc đến ngọn.</p>
+                                <a href="index.html"><img src="assets/images/tbstore.png" class="img-fluid" alt="logo"></a>
                             </div>
 
                         </div>
@@ -220,7 +217,6 @@
                                 <li><a href="index.php?page=about">Về Chúng Tôi</a></li>
                                 <li><a href="index.php?page=categories&id_cate=1">Dịch Vụ</a></li>
                                 <li><a href="index.php?page=contact">Liên Hệ</a></li>
-                                <li><a href="index.php?page=blog&id_cate=2">Tin Tức</a></li>
                             </ul>
                         </div>
                     </div>
@@ -248,7 +244,7 @@
                 <div class="row">
                     <div class="col-xl-6 col-lg-6 text-center text-lg-left">
                         <div class="copyright-text">
-                            <p>Copyright &copy; 2023. All Right Reserved <a href="https://maitocxinh.id.vn/index.php#">Mái Tóc Xinh</a></p>
+                            <p>Copyright &copy; 2023. All Right Reserved <a href="http://tb-store/index.php">TB STORE</a></p>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
@@ -258,7 +254,6 @@
                                 <li><a href="index.php?page=about">Về Chúng Tôi</a></li>
                                 <li><a href="index.php?page=categories&id_cate=1">Dịch Vụ</a></li>
                                 <li><a href="index.php?page=contact">Liên Hệ</a></li>
-                                <li><a href="index.php?page=blog&id_cate=2">Tin Tức</a></li>
                             </ul>
                         </div>
                     </div>

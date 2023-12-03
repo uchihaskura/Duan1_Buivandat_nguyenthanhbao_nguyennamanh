@@ -29,14 +29,8 @@
         <div class="form-container sign-in">
             <form action="../model/login_process.php" method="post">
                 <h1>Sign In</h1>
-                <div class="social-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your email password</span>
-                <input type="text" class="form-control" name="usr" placeholder="Tài Khoản">
+                <span >or use your email password</span>
+                <input type="text" class="form-control mb-2" name="usr" placeholder="Tài Khoản">
                 <input type="password" class="form-control" name="pwd" placeholder="Mật Khẩu">
                 <a href="#">Forget Your Password?</a>
                 <button>Sign In</button>

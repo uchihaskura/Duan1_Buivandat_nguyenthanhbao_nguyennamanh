@@ -86,9 +86,9 @@
 </div>
 
 <!-- Nút "Thùng Rác" -->
-<div class="trash-button-container">
+<!-- <div class="trash-button-container">
     <a class="btn btn-success" href="admin.php?page=product-trash">Thùng Rác</a>
-</div>
+</div> -->
 <div class="add-button-container">
     <a class="btn btn-success" href="admin.php?page=product-add">Thêm Mới</a>
 </div>

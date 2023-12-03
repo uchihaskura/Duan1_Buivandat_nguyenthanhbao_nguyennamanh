@@ -47,29 +47,92 @@ $page = $_GET['page'] ?? "theloai";
         $msg="";
         $h2="THÊM MỚI SẢN PHẨM";
         $id=$_GET['id']??"";
-        $check0 = "";
-        $check1 = "";
         if($id!=""){
             $h2="CHỈNH SỬA SẢN PHẨM";
             $stmt = $conn -> prepare("SELECT * FROM product WHERE id = '$id'");
             $stmt->execute();
             $prod = $stmt->fetch();
-            if($prod["status"] == 0){
-                $check0 = "checked";
-            }else{
-                $check0 = "";
+
+            if(isset($_POST['submit'])){
+                $name=$_POST['name']??"";
+                $price=$_POST['price']??0;
+                $discount=$_POST['discount']??0;
+                if (isset($_FILES['img']) && $_FILES['img']['name']!= "") {
+                    $img=$_FILES['img']['name']??"";
+                    $target_dir = "../uploads_product/";
+                    $target_file = $target_dir . $img;
+                    $uploadOk = 1;
+                    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+    
+                    // Check if image file is a actual image or fake image
+                    if(isset($_POST["submit"])) {
+                        $check = getimagesize($_FILES["img"]["tmp_name"]);
+                        if($check !== false) {
+                            echo "File is an image - " . $check["mime"] . ".";
+                            $uploadOk = 1;
+                        } else {
+                            echo "File is not an image.";
+                            $uploadOk = 0;
+                        }
+                    }
+    
+                    // Check if file already exists
+                    if (file_exists($target_file)) {
+                        echo "Sorry, file already exists.";
+                        $uploadOk = 0;
+                    }
+    
+                    // Check file size
+                    if ($_FILES["img"]["size"] > 5000000) {
+                        echo "Sorry, your file is too large.";
+                        $uploadOk = 0;
+                    }
+    
+                    // Allow certain file formats
+                    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+                    && $imageFileType != "gif" ) {
+                        echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+                        $uploadOk = 0;
+                    }
+    
+                    // Check if $uploadOk is set to 0 by an error
+                    if ($uploadOk == 0) {
+                        echo "Sorry, your file was not uploaded.";
+                    // if everything is ok, try to upload file
+                    } else {
+                        if (move_uploaded_file($_FILES["img"]["tmp_name"], $target_file)) {
+                        
+                        echo "The file ". htmlspecialchars( basename( $_FILES["img"]["name"])). " has been uploaded.";
+                        } else {
+                        echo "Sorry, there was an error uploading your file.";
+                        }
+}
+                }else{
+                    $img=$prod['img'];
+                }
+                $id_cate=$_POST['id_cate']??"";
+                // $view=$_POST['view']??0;
+                $description=$_POST['description']??"";
+                if($name!=""){
+                    if($id==!""){
+                        $stmt = $conn -> prepare("UPDATE product set name = '$name', 
+                        price = $price, discount = $discount, img = '$img', id_cate = $id_cate, /*view = $view,*/
+                        update_at = CURRENT_TIMESTAMP, description = '$description' WHERE id =$id");
+                        $stmt->execute();
+                        header('Location: admin.php?page=product'); 
+                        // exit();
+                    }else{
+                        $stmt = $conn -> prepare("INSERT INTO product(name, price, discount, img, id_cate, create_at, update_at, description)
+                        VALUES ('$name', $price, $discount, '$img', $id_cate, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, '$description')");
+                        $stmt->execute();
+                        header('Location: admin.php?page=product'); /*die()*/;
+                    }
+                }else $msg="Vui lòng nhập đầy đủ thông tin";         
             }
-            if($prod["status"] == 1){
-                $check1 = "checked";
-            }else{
-                $check1 = "";
-            }
-        }      
-        if(isset($_POST['submit'])){
+        }else if(isset($_POST['submit'])){
             $name=$_POST['name']??"";
             $price=$_POST['price']??0;
             $discount=$_POST['discount']??0;
-            $status=$_POST['status']??0;
             if (isset($_FILES['img']) && $_FILES['img']['name']!= "") {
                 $img=$_FILES['img']['name']??"";
                 $target_dir = "../uploads_product/";
@@ -88,7 +151,6 @@ $page = $_GET['page'] ?? "theloai";
                         $uploadOk = 0;
                     }
                 }
-
                 // Check if file already exists
                 if (file_exists($target_file)) {
                     echo "Sorry, file already exists.";
@@ -100,14 +162,12 @@ $page = $_GET['page'] ?? "theloai";
                     echo "Sorry, your file is too large.";
                     $uploadOk = 0;
                 }
-
                 // Allow certain file formats
                 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
                 && $imageFileType != "gif" ) {
                     echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-                    $uploadOk = 0;
+$uploadOk = 0;
                 }
-
                 // Check if $uploadOk is set to 0 by an error
                 if ($uploadOk == 0) {
                     echo "Sorry, your file was not uploaded.";
@@ -116,6 +176,25 @@ $page = $_GET['page'] ?? "theloai";
                     if (move_uploaded_file($_FILES["img"]["tmp_name"], $target_file)) {
                     
                     echo "The file ". htmlspecialchars( basename( $_FILES["img"]["name"])). " has been uploaded.";
+
+                    $id_cate=$_POST['id_cate']??"";
+            // $view=$_POST['view']??0;
+            $description=$_POST['description']??"";
+            if($name!=""){
+                if($id==!""){
+                    $stmt = $conn -> prepare("UPDATE product set name = '$name', 
+                    price = $price, discount = $discount, img = '$img', id_cate = $id_cate, /*view = $view,*/
+                    update_at = CURRENT_TIMESTAMP, description = '$description' WHERE id =$id");
+                    $stmt->execute();
+                    header('Location: admin.php?page=product'); 
+                    // exit();
+                }else{
+                    $stmt = $conn -> prepare("INSERT INTO product(name, price, discount, img, id_cate, create_at, update_at, description)
+                    VALUES ('$name', $price, $discount, '$img', $id_cate, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, '$description')");
+                    $stmt->execute();
+                    header('Location: admin.php?page=product'); /*die()*/;
+                }
+            }else $msg="Vui lòng nhập đầy đủ thông tin"; 
                     } else {
                     echo "Sorry, there was an error uploading your file.";
                     }
@@ -123,24 +202,7 @@ $page = $_GET['page'] ?? "theloai";
             }else{
                 $img=$prod['img'];
             }
-            $id_cate=$_POST['id_cate']??"";
-            // $view=$_POST['view']??0;
-            $description=$_POST['description']??"";
-            if($name!=""){
-                if($id==!""){
-                    $stmt = $conn -> prepare("UPDATE product set name = '$name', 
-                    price = $price, discount = $discount, img = '$img', id_cate = $id_cate, /*view = $view,*/
-                    update_at = CURRENT_TIMESTAMP, description = '$description', status = $status WHERE id =$id");
-                    $stmt->execute();
-                    header('Location: admin.php?page=product'); 
-                    // exit();
-                }else{
-                    $stmt = $conn -> prepare("INSERT INTO product(name, price, discount, img, id_cate, /*view,*/ create_at, update_at, description, status)
-                    VALUES ('$name', $price, $discount, '$img', $id_cate, /*$view,*/ CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, '$description', $status)");
-                    $stmt -> execute();
-                    header('Location: admin.php?page=product'); /*die()*/;
-                }
-            }else $msg="Vui lòng nhập đầy đủ thông tin";         
+                    
         }
       ?>
       <div class="container m-auto">
@@ -211,11 +273,11 @@ $page = $_GET['page'] ?? "theloai";
                 }?>; margin:auto;" width="100px" height="100px" src="../uploads_product/<?= $prod['img']??"" ?>" alt="">
                 <input type="file" name="img" value="<?= $prod['img']??"" ?>" class="form-control bg-light" >
             </div>
-            <div class="input mb-3">
+            <!-- <div class="input mb-3">
                 <label for="">Trạng Thái:</label>
                 <input type="radio" name="status" value="0" <?=$check0?>> Ẩn
                 <input type="radio" name="status" value="1" <?=$check1?>> hiện
-            </div>
+            </div> -->
             <div class="descrip mb-3">
                 <label for="">Mô Tả</label>
                 <textarea name="description" id="description" class="form-control bg-light" rows="5"><?= $prod['description']??"" ?></textarea>

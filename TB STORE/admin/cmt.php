@@ -11,7 +11,6 @@
             <th>Ngày Chỉnh Sửa </th>
             <th colspan="2"></th>
         </tr>
-        
     </thead>
     <tbody>
     <?php
@@ -22,18 +21,14 @@
         $stmt -> execute();
         while($cmt = $stmt->fetch()){
                 // Assuming $yourDateString is the string date you have
-                $dateTime = new DateTime($cmt[5]);
-                
+                $dateTime = new DateTime($cmt[5]);          
                 // Now you can use date_format with $dateTime
-                $formattedDate = date_format($dateTime, 'd/m/Y H:i:s');
-                
+                $formattedDate = date_format($dateTime, 'd/m/Y H:i:s');              
                 // Use $formattedDate as needed
                 // Assuming $yourDateString is the string date you have
-                $dateTime1 = new DateTime($cmt[4]);
-                
+                $dateTime1 = new DateTime($cmt[4]);               
                 // Now you can use date_format with $dateTime
-                $formattedDate1 = date_format($dateTime1, 'd/m/Y H:i:s');
-                
+                $formattedDate1 = date_format($dateTime1, 'd/m/Y H:i:s');               
                 // Use $formattedDate as needed
             echo "<tr>
                 <td>$cmt[0]</td>
