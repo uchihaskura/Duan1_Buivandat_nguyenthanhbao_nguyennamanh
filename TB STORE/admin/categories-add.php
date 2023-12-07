@@ -69,8 +69,8 @@ $page = $_GET['page'] ?? "theloai";
                     header('Location: admin.php?page=categories'); 
                     exit();
                 }else{
-                    $stmt = $conn -> prepare("INSERT INTO categories(name, stt, status)
-                    VALUES ('$name', $stt, $status)");
+                    $stmt = $conn -> prepare("INSERT INTO categories(name, stt, status,deleted)
+                    VALUES ('$name', $stt, $status,0)");
                     $stmt -> execute();
                     header('Location: admin.php?page=categories'); die();
                 }

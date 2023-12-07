@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: localhost
--- Thời gian đã tạo: Th12 03, 2023 lúc 03:22 PM
--- Phiên bản máy phục vụ: 8.0.31
--- Phiên bản PHP: 7.4.33
+-- Host: localhost
+-- Generation Time: Dec 07, 2023 at 03:43 AM
+-- Server version: 8.0.31
+-- PHP Version: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `giaythethao`
+-- Database: `giaythethao`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `categories`
+-- Table structure for table `categories`
 --
 
 CREATE TABLE `categories` (
@@ -36,7 +36,7 @@ CREATE TABLE `categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `categories`
+-- Dumping data for table `categories`
 --
 
 INSERT INTO `categories` (`id`, `name`, `stt`, `status`, `deleted`) VALUES
@@ -44,23 +44,12 @@ INSERT INTO `categories` (`id`, `name`, `stt`, `status`, `deleted`) VALUES
 (2, 'ADIDAS', 0, 1, 0),
 (3, 'PUMA', 0, 1, 0),
 (4, 'MLB', 0, 1, 0),
-(5, 'Sáp vuốt tóc', 0, 1, 1),
-(6, 'Pomade', 0, 1, 1),
-(7, 'Bột tạo phồng', 0, 1, 1),
-(8, 'Gôm giữ nếp', 0, 1, 1),
-(9, 'Nước hoa nam', 0, 1, 1),
-(10, 'Nước hoa nữ', 0, 1, 1),
-(11, 'Nước hoa hương tươi mát', 0, 1, 1),
-(12, 'Nước hoa note trầm hương', 0, 1, 1),
-(13, 'Sữa rửa mặt ', 0, 1, 1),
-(14, 'Tẩy tế bào chết', 0, 1, 1),
-(15, 'Cấp ẩm', 0, 1, 1),
-(16, 'Toner', 0, 1, 1);
+(20, 'Đạt', 5, 1, 1);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `cmt`
+-- Table structure for table `cmt`
 --
 
 CREATE TABLE `cmt` (
@@ -72,10 +61,17 @@ CREATE TABLE `cmt` (
   `update_at` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `cmt`
+--
+
+INSERT INTO `cmt` (`id`, `content`, `id_prod`, `id_user`, `create_at`, `update_at`) VALUES
+(22, 'giày đẹp', 2, 'vandat', '2023-12-07 10:24:32', '2023-12-07 10:24:32');
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `devvn_quanhuyen`
+-- Table structure for table `devvn_quanhuyen`
 --
 
 CREATE TABLE `devvn_quanhuyen` (
@@ -86,7 +82,7 @@ CREATE TABLE `devvn_quanhuyen` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `devvn_quanhuyen`
+-- Dumping data for table `devvn_quanhuyen`
 --
 
 INSERT INTO `devvn_quanhuyen` (`maqh`, `name`, `type`, `matp`) VALUES
@@ -807,7 +803,7 @@ INSERT INTO `devvn_quanhuyen` (`maqh`, `name`, `type`, `matp`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `devvn_tinhthanhpho`
+-- Table structure for table `devvn_tinhthanhpho`
 --
 
 CREATE TABLE `devvn_tinhthanhpho` (
@@ -817,7 +813,7 @@ CREATE TABLE `devvn_tinhthanhpho` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 --
--- Đang đổ dữ liệu cho bảng `devvn_tinhthanhpho`
+-- Dumping data for table `devvn_tinhthanhpho`
 --
 
 INSERT INTO `devvn_tinhthanhpho` (`matp`, `name`, `type`) VALUES
@@ -888,7 +884,7 @@ INSERT INTO `devvn_tinhthanhpho` (`matp`, `name`, `type`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `devvn_xaphuongthitran`
+-- Table structure for table `devvn_xaphuongthitran`
 --
 
 CREATE TABLE `devvn_xaphuongthitran` (
@@ -899,7 +895,7 @@ CREATE TABLE `devvn_xaphuongthitran` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `devvn_xaphuongthitran`
+-- Dumping data for table `devvn_xaphuongthitran`
 --
 
 INSERT INTO `devvn_xaphuongthitran` (`xaid`, `name`, `type`, `maqh`) VALUES
@@ -12077,7 +12073,7 @@ INSERT INTO `devvn_xaphuongthitran` (`xaid`, `name`, `type`, `maqh`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `galery`
+-- Table structure for table `galery`
 --
 
 CREATE TABLE `galery` (
@@ -12089,7 +12085,7 @@ CREATE TABLE `galery` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `orders`
+-- Table structure for table `orders`
 --
 
 CREATE TABLE `orders` (
@@ -12105,7 +12101,7 @@ CREATE TABLE `orders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `orders`
+-- Dumping data for table `orders`
 --
 
 INSERT INTO `orders` (`id`, `id_user`, `name`, `email`, `phone`, `address`, `note`, `order_date`, `status`) VALUES
@@ -12116,12 +12112,13 @@ INSERT INTO `orders` (`id`, `id_user`, `name`, `email`, `phone`, `address`, `not
 (24, '28', 'Nam Nam', 'nhunam1311@gmail.com', '+84939685880', 'Nam Nam', 'Giao Hàng Nhanh Giúp Em Nhóaaa', '2023-11-21 08:02:14', 2),
 (30, 'admin', 'nthba', 'nguyenthanhbao188@gmail.com', '0374977918', 'Đường Hoàng Quốc Việt . Hẻm 234 . nhà Cuối hẻm 234, Phường An Bình, Quận Ninh Kiều, Thành phố Cần Thơ', 'hihi', '2023-12-03 22:10:41', 1),
 (31, 'admin', 'Thanh Bao', 'nguyenthanhbao188@gmail.com', '0374977918', 'Can Tho, Phường Hạp Lĩnh, Thành phố Bắc Ninh, Tỉnh Bắc Ninh', 'hihi', '2023-12-03 22:21:56', 1),
-(32, 'admin', 'nthbao', 'nguyenthanhbao188@gmail.com', '0374977918', 'Đường Hoàng Quốc Việt . Hẻm 234 . nhà Cuối hẻm 234, Xã Tân Hưng, Thành phố Hưng Yên, Tỉnh Hưng Yên', 'hihi', '2023-12-03 22:22:18', 1);
+(32, 'admin', 'nthbao', 'nguyenthanhbao188@gmail.com', '0374977918', 'Đường Hoàng Quốc Việt . Hẻm 234 . nhà Cuối hẻm 234, Xã Tân Hưng, Thành phố Hưng Yên, Tỉnh Hưng Yên', 'hihi', '2023-12-03 22:22:18', 1),
+(34, 'vandat', 'Đạt', 'buivandat2503@gmail.com', '0931778384', '272123123, Phường An Hòa, Quận Ninh Kiều, Thành phố Cần Thơ', '12313', '2023-12-07 10:25:00', 1);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `order_details`
+-- Table structure for table `order_details`
 --
 
 CREATE TABLE `order_details` (
@@ -12135,71 +12132,20 @@ CREATE TABLE `order_details` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `order_details`
+-- Dumping data for table `order_details`
 --
 
 INSERT INTO `order_details` (`id`, `id_order`, `id_prod`, `name_prod`, `price`, `quantity`, `total_money`) VALUES
 (37, 30, 2, ' NIKE JORDAN', 3000000, 1, 3000000),
 (38, 31, 1, 'NIKE JORDAN', 3000000, 1, 3000000),
-(39, 32, 7, 'EAZY 350 BLACK', 6300000, 1, 6300000);
+(39, 32, 7, 'EAZY 350 BLACK', 6300000, 1, 6300000),
+(41, 34, 2, ' NIKE JORDAN', 3000000, 1, 3000000),
+(42, 34, 1, 'NIKE JORDAN', 3000000, 1, 3000000);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `post`
---
-
-CREATE TABLE `post` (
-  `id` int NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `img` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT 'thumbnail',
-  `create_at` datetime NOT NULL,
-  `update_at` datetime NOT NULL,
-  `view` int NOT NULL,
-  `meta_description` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `id_cate` int NOT NULL,
-  `deleted` int NOT NULL COMMENT '0 là tồn tại 1 là đã xóa',
-  `status` int NOT NULL COMMENT '0 là ẩn 1 là hiện'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Đang đổ dữ liệu cho bảng `post`
---
-
-INSERT INTO `post` (`id`, `name`, `img`, `create_at`, `update_at`, `view`, `meta_description`, `description`, `id_cate`, `deleted`, `status`) VALUES
-(1, 'Đánh giá chi tiết Forte Series Control Clay – Lọ sáp hút dầu duy nhất của Forte ?', 'b1.png', '2023-11-14 09:11:01', '2023-11-23 18:26:00', 205, 'Đánh giá Sáp vuốt tóc Forte Series Control Clay – Hút dầu, nhẹ tóc có chuẩn cho tóc mỏng ?   Giữ nếp tốt, bóng mờ, khô, nhẹ, mùi bình thường, đẳng cấp labmade. Tuyệt vời cho tóc mỏng ....', '<h2><strong>Đánh giá Sáp vuốt tóc Forte Series Control Clay – Hút dầu, nhẹ tóc có chuẩn cho tóc mỏng ?</strong></h2><p>&nbsp;</p><blockquote><p><i>Giữ nếp tốt, bóng mờ, khô, nhẹ, mùi bình thường, đẳng cấp labmade. Tuyệt vời cho tóc mỏng (đấy là mình nghĩ thế chứ tóc mình không mỏng).</i></p></blockquote><blockquote><p><i>Chất tóc người sử dụng: Trung bình, Dày</i></p></blockquote><h3><strong>I. Thiết kế sản phẩm sáp vuốt tóc Forte Series Control Clay</strong></h3><p>Vẫn là ngoại hình cơ bản của một sản phẩm forte, hộp nhựa bóng mờ màu đen, dày dặn, chắc chắn. Sản phẩm có hộp giấy bên ngoài ghi đầy đủ thông tin/thành phần của sản phẩm. Với mình cảm giác cầm nắm sờ mó một hộp Forte luôn là một cảm giác thoải mái, sung sướng cho cơn nghiện này… Bên trong nắp vặn còn 1 nắp nhựa để đậy kín sản phẩm hoàn toàn. Rất chỉn chu, rất labmade.</p><p>&nbsp;</p><p><img src=\"https://clmensstore.com/wp-content/uploads/2023/01/CLAY_BACK_SOLO_600x600.webp\" alt=\"\" srcset=\"https://clmensstore.com/wp-content/uploads/2023/01/CLAY_BACK_SOLO_600x600.webp 600w, https://clmensstore.com/wp-content/uploads/2023/01/CLAY_BACK_SOLO_600x600-300x300.webp 300w, https://clmensstore.com/wp-content/uploads/2023/01/CLAY_BACK_SOLO_600x600-150x150.webp 150w, https://clmensstore.com/wp-content/uploads/2023/01/CLAY_BACK_SOLO_600x600-96x96.webp 96w, https://clmensstore.com/wp-content/uploads/2023/01/CLAY_BACK_SOLO_600x600-42x42.webp 42w, https://clmensstore.com/wp-content/uploads/2023/01/CLAY_BACK_SOLO_600x600-60x60.webp 60w, https://clmensstore.com/wp-content/uploads/2023/01/CLAY_BACK_SOLO_600x600-247x247.webp 247w, https://clmensstore.com/wp-content/uploads/2023/01/CLAY_BACK_SOLO_600x600-510x510.webp 510w, https://clmensstore.com/wp-content/uploads/2023/01/CLAY_BACK_SOLO_600x600-100x100.webp 100w, https://clmensstore.com/wp-content/uploads/2023/01/CLAY_BACK_SOLO_600x600-50x50.webp 50w, https://clmensstore.com/wp-content/uploads/2023/01/CLAY_BACK_SOLO_600x600-170x170.webp 170w\" sizes=\"100vw\" width=\"515\" height=\"515\"></p><p>“Vỏ hộp vẫn là Texture Hair Clay – Tuy nhiên để phân biệt với Forte Series Texture Clay, Control Clay sẽ không có chữ Extreme.</p><p>Điểm: 9/10</p><h3><strong>II. Mùi hương của Sáp vuốt tóc Forte Series Control Clay:</strong></h3><p>Mùi hương nước khoáng + mùi bạch đậu khấu, 1 loại gia vị hướng ngọt và cay nhẹ, rất nhẹ (mình biết vì mình có 1 con nước hoa zara mùi này). Mùi hương này cơ bản, nam tính và quan trọng nhất là bám toả không lâu, chỉ thoang thoảng sau khi vuốt sáp vài tiếng.</p><p>Điểm: 8/10 – Forte vẫn chọn mùi hương chủ đạo và đi hướng an toàn.</p><h3><strong>III. Chất sáp của Forte Series Control Clay</strong></h3><p>Sản phẩm màu trắng, có một độ đặc vừa phải, đặc đủ để giữ bề mặt sáp cố định không bị xô dịch khi vận chuyển, nhưng lấy sáp và xoa ra thì cực kì mềm, êm và creamy. Chất sáp này đảm bảo sẽ không khiến ai khó chịu khi sử dụng hay bảo quản.</p><p><img src=\"https://clmensstore.com/wp-content/uploads/2022/08/Chat-sap-mem-Dang-Cream-Clay-e1660412747601.png\" alt=\"Sáp vuốt tóc Forte Series Control Clay\" srcset=\"https://clmensstore.com/wp-content/uploads/2022/08/Chat-sap-mem-Dang-Cream-Clay-e1660412747601.png 1620w, https://clmensstore.com/wp-content/uploads/2022/08/Chat-sap-mem-Dang-Cream-Clay-e1660412747601-300x195.png 300w, https://clmensstore.com/wp-content/uploads/2022/08/Chat-sap-mem-Dang-Cream-Clay-e1660412747601-1024x666.png 1024w, https://clmensstore.com/wp-content/uploads/2022/08/Chat-sap-mem-Dang-Cream-Clay-e1660412747601-768x499.png 768w, https://clmensstore.com/wp-content/uploads/2022/08/Chat-sap-mem-Dang-Cream-Clay-e1660412747601-1536x998.png 1536w, https://clmensstore.com/wp-content/uploads/2022/08/Chat-sap-mem-Dang-Cream-Clay-e1660412747601-510x332.png 510w\" sizes=\"100vw\" width=\"982\" height=\"638\"></p><p>Với chất sáp từ Labmade. Forte luôn chiếm trọn điểm 10/10 cho chất sáp.</p><h3><strong>IV. Hiệu năng sáp vuốt tóc Forte Series Control Clay:</strong></h3><p>Các bạn cứ nhìn clip của mình là rõ. Tóc mình sợi dày + mật độ dày + chiều dài hiện tại là đã quá lâu cần phải đi cắt (vuốt xong là mấy hôm sau mình cắt luôn), vậy mà con sáp này vừa vuốt lên đã cho 1 volume khủng khiếp và một form tóc cực kì đẹp. Lần đầu tiên mình dùng 1 con clay nhẹ mà vuốt lên được tốt như này.</p><p>Một điều cực kì quan trọng nữa: sáp phẩm này theo hướng khô. Không phải khô kiểu hút dầu mạnh mà là khô theo kiểu đanh, và sạch tóc. Một cảm giác khô vô cùng mới lại nhất mà mình được trải nghiệm. Kiểu khô này rất dễ chịu, không phải khô kiểu hút dầu như những Kevin Murphy, cũng không khô kiểu rít tóc như O’Douds matte paste (con paste đấy lên tóc mình còn không khô nhiều cơ), đúng là một cảm giác mà chỉ có hàng labmade tốt mới mang lại được.</p><p><strong>Độ giữ nếp trên tóc: </strong>sáp trên tóc mình cho ra độ giữ nếp firm hold (Light-&gt;Medium-&gt;Firm-&gt;Strong-&gt;Heavy), độ dính của sản phẩm rất vừa phải, đủ để giữ nếp tóc + tạo ra độ rít khi lùa tay. Theo mình thì con này sẽ lên được strong trên các nền tóc mỏng, trung bình có mật độ thưa .</p><p><strong>Độ nặng của sáp trên tóc:</strong> rất nhẹ, một phần là do mình tóc dày, nên không thể nói chính xác nhẹ như thế nào được. Tuy nhiên mình tin rằng nó sẽ rất phù hợp với các mái tóc mỏng vì độ nhẹ của dòng Control Clay này rất hợp với tóc mỏng.</p><p><strong>Độ duy trì:</strong> tất nhiên là nhẹ thì không thể duy trì cho các kiểu kéo tóc về sau quá lâu (4-5 giờ cho tóc dày). Nhưng đây là con sáp nhẹ duy trì được lâu nhất (trong tất cả các dòng sáp nhẹ mình từng dùng bởi vì tóc mình chỉ hợp với các sản phẩm dành cho tóc dày như người anh của nó là Forte Series Texture Clay). Khi hết duy trì thì nó cũng không rã bung ra mất hết form mà vẫn để lại một form tóc vô cùng tử tế.</p><p><strong>Độ bóng:</strong> trên tóc mình là matte shine (độ bóng mờ), đúng như hãng công bố.</p><p><strong>Về vấn đề ép side của sáp</strong> : mời các bạn xem clip, ép rất tốt, duy trì cũng vô cùng tốt do phần side it chịu nhiều tác động của môi trường.</p><p><strong>Độ Đàn hồi tóc khi dùng sáp:</strong> Tốt, ae nào muốn vuốt kiểu bồng bềnh con này cũng chiều được luôn. Mà muốn đóng form thì cứ dùng nhiều sáp vào cho đủ dính là được.</p><p><strong>Thàn phần:</strong> có clay có sáp có chất tạo dính như nhiều con labmade khác, nhưng cảm giác thì vô cùng khác biệt. Có thêm ít dầu dưỡng và bơ hạt mỡ để không làm hư tóc nếu dùng trong thời gian dài.</p><p><strong>Gội rửa:</strong> dễ dàng gội với 1 lần gội.</p><p><strong>Pre-style nên kết hợp:</strong></p><ul><li><a href=\"https://clmensstore.com/cua-hang/forte-series-sea-salt-spray/\"><strong>Forte Series Sea salt Spray</strong></a></li></ul><p><img src=\"https://clmensstore.com/wp-content/uploads/2023/01/CONTROL-CLAY-1.jpg\" alt=\"Sáp vuốt tóc Forte Series Control Clay\" srcset=\"https://clmensstore.com/wp-content/uploads/2023/01/CONTROL-CLAY-1.jpg 1197w, https://clmensstore.com/wp-content/uploads/2023/01/CONTROL-CLAY-1-224x300.jpg 224w, https://clmensstore.com/wp-content/uploads/2023/01/CONTROL-CLAY-1-766x1024.jpg 766w, https://clmensstore.com/wp-content/uploads/2023/01/CONTROL-CLAY-1-768x1027.jpg 768w, https://clmensstore.com/wp-content/uploads/2023/01/CONTROL-CLAY-1-72x96.jpg 72w, https://clmensstore.com/wp-content/uploads/2023/01/CONTROL-CLAY-1-31x42.jpg 31w, https://clmensstore.com/wp-content/uploads/2023/01/CONTROL-CLAY-1-45x60.jpg 45w, https://clmensstore.com/wp-content/uploads/2023/01/CONTROL-CLAY-1-1149x1536.jpg 1149w, https://clmensstore.com/wp-content/uploads/2023/01/CONTROL-CLAY-1-510x682.jpg 510w, https://clmensstore.com/wp-content/uploads/2023/01/CONTROL-CLAY-1-127x170.jpg 127w\" sizes=\"100vw\" width=\"651\" height=\"870\"></p><p>Với mình Sáp vuốt tóc <strong>Forte Series Control Clay</strong> là một sản phẩm hoàn hảo để bổ sung vào line up của Forte, khi Texture clay ẩm và dính cho tóc dày, còn Moulding Paste thì giữ nếp lại không đủ, thì sự có mặt của Control Clay là vô cùng hợp lý.</p>', 1, 0, 1),
-(2, 'Đánh giá chi tiết Shear Revival Northern Light Matte Paste – Label mới', 'b2.jpg', '2023-11-17 15:11:53', '2023-11-17 15:17:28', 25, 'SHEAR REVIVAL MATTE PASTE hay còn gọi nguyên tên là Shear Revival Northern Light Matte Paste – Phiên bản Label mới Thông tin chất tóc của người đánh giá: Sợi tóc dày, mật độ nhiều. I.Thiết kế sản phẩm của Shear Revival Matte Paste Hũ thuỷ tinh cánh gián r', '<p><strong>SHEAR REVIVAL MATTE PASTE hay còn gọi nguyên tên là Shear Revival Northern Light Matte Paste – Phiên bản Label mới</strong></p><p><i>Thông tin chất tóc của người đánh giá: Sợi tóc dày, mật độ nhiều.</i></p><h3><strong>I.Thiết kế sản phẩm của Shear Revival Matte Paste</strong></h3><p>Hũ thuỷ tinh cánh gián rất chắc chắn, đây dường như là biểu tượng của Homebrew đến từ Mỹ. Label metalic siêu đẹp được thiết kế lại sao đợt Re-Brand lớn nhất từ hãng. Vẫn là kiểu label được thiết kế lấp lánh rất bắt mắt dưới ánh đèn. Nếu quý khách chưa rõ, hãy đến CL Men’s Store để được trải nghiệm ngoại hình của các sản phẩm đến từ Shear Revival. Các thông tin sản phẩm như Firm Hold, Matte Finish, hướng dẫn sử dụng, thành phần, dung tích được ghi đầy đủ trên label.&nbsp;</p><p><img src=\"https://clmensstore.com/wp-content/uploads/2022/03/274408626_3479851188908260_5916737463497395437_n.jpg\" alt=\"Shear Revival Matte Paste\" srcset=\"https://clmensstore.com/wp-content/uploads/2022/03/274408626_3479851188908260_5916737463497395437_n.jpg 2048w, https://clmensstore.com/wp-content/uploads/2022/03/274408626_3479851188908260_5916737463497395437_n-300x169.jpg 300w, https://clmensstore.com/wp-content/uploads/2022/03/274408626_3479851188908260_5916737463497395437_n-1024x576.jpg 1024w, https://clmensstore.com/wp-content/uploads/2022/03/274408626_3479851188908260_5916737463497395437_n-768x432.jpg 768w, https://clmensstore.com/wp-content/uploads/2022/03/274408626_3479851188908260_5916737463497395437_n-1536x864.jpg 1536w, https://clmensstore.com/wp-content/uploads/2022/03/274408626_3479851188908260_5916737463497395437_n-510x287.jpg 510w\" sizes=\"100vw\" width=\"785\" height=\"441\"></p><h3><strong>II. Mùi hương của Shear Revival Matte Paste</strong></h3><p>Mùi hương chủ đạo là mùi citrus-cam chanh và một ít thảo mộc. Hầu hết các sản phẩm của Shear Revival đều có tông mùi tương đối giống nhau, nhiều cam chanh và hơi hướng thảo mộc nhẹ nhàng. Mùi hương dễ dùng, chiều lòng số đông, không gây khó chịu và phù hợp với hầu hết mọi điều kiện môi trường. Mùi hương toả nhẹ, bám tương đối lâu.</p><h3><strong>III. Chất sáp của Shear Revival Matte Paste</strong></h3><p>Shear Revival Matte Paste có chất sáp màu trắng, ngã xám một ít</p><ul><li>Scoop out (lấy sáp): Sản phẩm dạng paste đúng như hãng miêu tả, scoop out rất mềm và dễ dàng, không gặp bất cứ khó khăn nào, tuy nhiên nếu so với một số loại paste khác trên thị trường thì chất sáp khá dẻo và không quá mềm kem.</li><li>Breakdown (đánh tan): Xoa ra tay tan dễ dàng, không gây khó chịu cho người dùng, có thể cảm nhận được độ dẻo của chất paste. Theo thời gian dài sử dụng chất sáp có thể hơi đặc lại 1 chút, nhưng khả năng đánh tan vẫn mềm như lúc mới mua.</li></ul><p><img src=\"https://clmensstore.com/wp-content/uploads/2022/12/z3949251190006_45f6501baa811f229947cc123f3f8cf4.jpg\" alt=\"z3949251190006 45f6501baa811f229947cc123f3f8cf4\" srcset=\"https://clmensstore.com/wp-content/uploads/2022/12/z3949251190006_45f6501baa811f229947cc123f3f8cf4.jpg 1620w, https://clmensstore.com/wp-content/uploads/2022/12/z3949251190006_45f6501baa811f229947cc123f3f8cf4-300x200.jpg 300w, https://clmensstore.com/wp-content/uploads/2022/12/z3949251190006_45f6501baa811f229947cc123f3f8cf4-1024x683.jpg 1024w, https://clmensstore.com/wp-content/uploads/2022/12/z3949251190006_45f6501baa811f229947cc123f3f8cf4-768x512.jpg 768w, https://clmensstore.com/wp-content/uploads/2022/12/z3949251190006_45f6501baa811f229947cc123f3f8cf4-96x64.jpg 96w, https://clmensstore.com/wp-content/uploads/2022/12/z3949251190006_45f6501baa811f229947cc123f3f8cf4-42x28.jpg 42w, https://clmensstore.com/wp-content/uploads/2022/12/z3949251190006_45f6501baa811f229947cc123f3f8cf4-60x40.jpg 60w, https://clmensstore.com/wp-content/uploads/2022/12/z3949251190006_45f6501baa811f229947cc123f3f8cf4-1536x1024.jpg 1536w, https://clmensstore.com/wp-content/uploads/2022/12/z3949251190006_45f6501baa811f229947cc123f3f8cf4-510x340.jpg 510w, https://clmensstore.com/wp-content/uploads/2022/12/z3949251190006_45f6501baa811f229947cc123f3f8cf4-170x113.jpg 170w\" sizes=\"100vw\" width=\"632\" height=\"421\"></p><h3><strong>IV. Hiệu năng của </strong><a href=\"https://clmensstore.com/cua-hang/shear-revival-northern-lights-matte-paste/\"><strong>Shear Revival Matte Paste</strong></a></h3><p><i>Độ nặng: </i>Đây vẫn là một sản phẩm paste nên độ nặng không thể sánh bằng các sản phẩm clay-wax nhiều sáp hay pomade được, thiên hướng nhẹ tóc. Tuy nhiên theo người sử dụng, đây là sản phẩm paste có độ nặng ổn nhất (không quá nặng) trong các sản phẩm paste hiện tại trên thị trường. Độ nặng này giúp sản phẩm có thể hoạt động tốt trên tóc dày, các sợi tóc cần độ nặng để uốn ra đằng sau cho các kiểu tóc pompadour, quiff, và duy trì được khả năng uốn sợi tóc lâu dài. Đây là một yếu tố khiến sản phẩm này có vị thế riêng trong thị trường matte paste đa dạng.</p><p><i>Sử dụng như một paste cào tay cho các kiểu tóc texture:</i> Sản phẩm khi apply lên tóc đã sấy khô sẽ cho một độ rít nhất định, đây là đặc tính của Northern Light matte paste nên sản phẩm được khuyên dùng là apply lên tóc ẩm, sấy và apply thêm đến khi đủ lượng. Sau khi khô lại thì không còn rít như ban đầu nữa, lùa tay dễ dàng hơn, chỉ còn lại một ít độ rít để phục vụ giữ nếp. Sản phẩm hướng ẩm, có độ rít thấp, lùa tay khá thoải mái, khoảng giữ nếp rất rộng, từ medium cho tới firm hold và thậm chỉ có thể trên firm hold một chút. Độ kết dính của các loại sáp trong thành phần giúp tóc dễ dàng đạt được độ phồng ở mức khá trở lên, chân tóc được dựng thẳng.</p><p><i>Texture cho ra nhiều và rõ rệt trên tóc:</i> Sau khi sản phẩm đã cố định trên tóc, độ rít ban đầu khi apply sẽ giảm hẳn và chỉ còn lại một lượng nhỏ để duy trì khả năng giữ nếp khi kết hợp với độ nặng của sản phẩm. Tóc lúc này có độ đàn hồi tốt hơn, dễ dàng lùa tay để tạo kiểu hoặc restyle theo ý muốn. Quý khách có thể dùng lược răng thưa để chải sản phẩm trên tóc khô nhằm dàn đều sản phẩm ra tóc, tuy nhiên sản phẩm không giúp chải lược đẹp form như pomade. Độ bóng matte shine đúng như nhà sản xuất công bố, tuy nhiên do đây là một sản phẩm ẩm nên matte shine sẽ không mờ tịt mờ câm như matte shine của sản phẩm khô mà sẽ mang lại một ngoại hình khoẻ mạnh cho tóc của quý khách. Khả năng duy trì, độ bền tạo kiểu ở mức rất tốt, cố định từ 10-12 tiếng trên tóc. Độ giữ nếp, độ phồng gần như không đổi trong suốt thời gian trên.</p><h4><strong>Tổng quan cá nhân:</strong></h4><ul><li>Độ giữ nếp: 7-8/10</li><li>Độ phồng: 8/10</li><li>Texture: 8.5/10</li><li>Độ bóng: 1/5</li></ul><p><strong>Gội rửa:</strong> Sản phẩm gội hết trong một lần gội với dầu gội, nếu quý khách sử dụng lượng sản phẩm nhiều trên nền tóc dài, hãy chia lượng dầu gội ra làm 2 lần gội để giúp gội sạch hơn.</p><h4><strong>Tip Sử dụng mang hiệu năng tốt nhất:</strong></h4><p><i>Để tối ưu hiệu năng khi sử dụng sản phẩm, đạt volume và độ giữ nếp tối đa, quý khách hãy apply sản phẩm lên tóc đã được lau khô bớt nước bằng khăn (damp hair-tóc ẩm), sau đó sấy khô tóc, kết hợp lược bán nguyện, lược răng thưa để tạo volume và cào tay để có texture. Sấy đến khi đạt được độ ẩm mong muốn. Với cách dùng như vậy, sản phẩm sẽ được dàn đều trên tóc, phù hợp cho các nhu cầu về độ giữ nếp, độ kết dính, ổn định form tóc cao, đồng thời tóc được duy trì độ ẩm lâu hơn, khoẻ mạnh hơn.</i></p><p><img src=\"https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145832-768x1024.jpg\" alt=\"IMG 20211027 145832\" srcset=\"https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145832-768x1024.jpg 768w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145832-225x300.jpg 225w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145832-72x96.jpg 72w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145832-32x42.jpg 32w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145832-45x60.jpg 45w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145832-1152x1536.jpg 1152w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145832-1536x2048.jpg 1536w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145832-510x680.jpg 510w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145832-128x170.jpg 128w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145832-scaled.jpg 1920w\" sizes=\"100vw\" width=\"522\" height=\"580\"></p><p><img src=\"https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_150021-768x1024.jpg\" alt=\"IMG 20211027 150021\" srcset=\"https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_150021-768x1024.jpg 768w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_150021-225x300.jpg 225w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_150021-72x96.jpg 72w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_150021-32x42.jpg 32w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_150021-45x60.jpg 45w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_150021-1152x1536.jpg 1152w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_150021-1536x2048.jpg 1536w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_150021-510x680.jpg 510w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_150021-128x170.jpg 128w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_150021-scaled.jpg 1920w\" sizes=\"100vw\" width=\"251\" height=\"280\"></p><p><img src=\"https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145902-768x1024.jpg\" alt=\"IMG 20211027 145902\" srcset=\"https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145902-768x1024.jpg 768w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145902-225x300.jpg 225w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145902-72x96.jpg 72w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145902-32x42.jpg 32w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145902-45x60.jpg 45w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145902-1152x1536.jpg 1152w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145902-1536x2048.jpg 1536w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145902-510x680.jpg 510w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145902-128x170.jpg 128w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145902-scaled.jpg 1920w\" sizes=\"100vw\" width=\"251\" height=\"280\"></p><p><img src=\"https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145828-768x1024.jpg\" alt=\"IMG 20211027 145828\" srcset=\"https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145828-768x1024.jpg 768w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145828-225x300.jpg 225w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145828-72x96.jpg 72w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145828-32x42.jpg 32w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145828-45x60.jpg 45w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145828-1152x1536.jpg 1152w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145828-1536x2048.jpg 1536w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145828-510x680.jpg 510w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145828-128x170.jpg 128w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20211027_145828-scaled.jpg 1920w\" sizes=\"100vw\" width=\"251\" height=\"280\"></p><p><img src=\"https://clmensstore.com/wp-content/uploads/2022/12/IMG_20221122_202458-766x1024.jpg\" alt=\"IMG 20221122 202458\" srcset=\"https://clmensstore.com/wp-content/uploads/2022/12/IMG_20221122_202458-766x1024.jpg 766w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20221122_202458-224x300.jpg 224w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20221122_202458-768x1026.jpg 768w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20221122_202458-72x96.jpg 72w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20221122_202458-31x42.jpg 31w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20221122_202458-45x60.jpg 45w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20221122_202458-1149x1536.jpg 1149w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20221122_202458-1532x2048.jpg 1532w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20221122_202458-510x682.jpg 510w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20221122_202458-127x170.jpg 127w, https://clmensstore.com/wp-content/uploads/2022/12/IMG_20221122_202458-scaled.jpg 1916w\" sizes=\"100vw\" width=\"251\" height=\"280\"></p><h3><strong>V.Tổng kết:</strong></h3><p><i><strong>Ưu:</strong></i></p><ul><li>Độ giữ nếp trải dài từ medium tới firm, phục vụ được nhiều nhu cầu giữ nếp hơn.</li><li>Sau khi sản phẩm cố định trên tóc cho khả năng lùa tay mượt mà, ít rít hơn các sản phẩm paste khác.</li><li>Sáp hướng ẩm, có độ nặng tốt nhất trong các matte paste homebrew khác trên thị trường, phù hợp cả cho chất tóc dày, cứng cần độ nặng.</li><li>Aloe leaf juice cùng, hướng dương và bơ ca cao giúp dưỡng ẩm, duy trì mái tóc khoẻ mạnh, không gây hại trong quá trình sử dụng lâu dài.</li><li>Độ bóng khoẻ mạnh, không quá matte tạo cảm giác khô xơ.</li><li>Khả năng tạo kiểu, tạo phồng, texture tốt.</li><li>Label mới đẹp, nhiều giá trị sưu tầm, trưng bày.</li></ul><p><i><strong>Nhược:</strong></i></p><ul><li>Độ giữ nếp có thể không đủ với những nhu cầu giữ nếp cao, đóng form tóc.</li><li>Độ nặng có thể dư thừa đối với các chất tóc mỏng thưa</li><li>Apply lên tóc khô khá rít, nên apply sản phẩm lên tóc ẩm. (xem lại tip sử dụng ở trên)</li><li>Không khô, không hút dầu.</li></ul><p>Liên hệ Mái Tóc Xinh <a href=\"https://www.facebook.com/watch?v=1523477285066879\">Tại Đây</a></p><h3><strong>VI. Cập nhật phiên bản LABEL mới:</strong></h3><p>Vừa qua thương hiệu Shear Revival đã có một đợt rebranding/cập nhật lại cho thương hiệu của mình. Các label (nhãn sản phẩm) của toàn bộ line được thay đổi đồng nhất theo thiết kế mới. Nay sản phẩm Northern Light Matte Paste sẽ có label trắng hơn (label của line sản phẩm cũ nếu mọi người để ý kĩ sẽ hơi ngả ngả màu), nhiều thông tin hơn, và artwork cũng khác đi. Shear Revival Matte Paste sẽ có phần artwork ít yếu tố “metalic” nhất để thể hiện đây là một sản phẩm tương đối ít bóng, độ bóng chỉ trong khoảng matte đến chạm ngưỡng natural shine. <strong>Giải thích từ ngữ:</strong></p><ul><li>Label: nhãn dán của sản phẩm, ghi thông tin, là ngoại hình chính, là “tấm áo” của sản phẩm.</li><li>Metalic: một loại nhãn dán, có thể coi là loại nhãn đẹp nhất thị trường hiện tại, tham khảo nhãn của các hãng Lockhart, Shear Revival.</li><li>Hold: độ giữ nếp của một sản phẩm đem lại khi sử dụng trên tóc</li><li>Medium hold: độ giữ nếp trung bình, thấp hơn firm hold và cao hơn light hold</li><li>Firm hold: độ giữ nếp chắc chắn trên mái tóc, cao hơn medium hold và thấp hơn strong hold.</li><li>Pompadour: kiểu tóc có độ dài tương đối, độ phồng ở mái và chải về phía sau.</li><li>Volume: độ phồng của mái tóc, khả năng đứng của chân tóc.</li><li>Texture: kết cấu lọn tóc.</li><li>Shine: độ bóng</li><li>Matte shine: bóng mờ, bóng rất thấp, gần như không có tí bóng nào.</li><li>Restyle: khả năng tái tạo lại form tóc, kiểu tóc sau khi tóc chịu tác động thay đổi hình dạng (đổi nón bảo hiểm,…)</li></ul>', 1, 0, 1),
-(3, 'Những mẹo chăm sóc tóc mỏng cho nam bạn nên biết', 'drnoshssidamigdott20230214151343cham-soc-toc-mong-cho-nam-5.jpg', '2023-11-21 13:15:44', '2023-11-23 17:24:35', 14, 'Nguyên nhân phổ biến nhất gây ra tình trạng tóc mỏng và thưa ở nam giới là do yếu tố di truyền học về hormone giới tính khiến cho tóc rụng theo các kiểu đặc trưng. Có một số kiểu hói đầu ở nam hay nữ mặc dù đã diễn ra trong một thời gian dài, khó có thể t', '<h2>1. Top 4 nguyên nhân khiến tóc mỏng và thưa ở nam giới</h2><figure class=\"image\"><img style=\"aspect-ratio:600/450;\" src=\"https://assets-hebela.cdn.vccloud.vn/media/0/dtiitodsirsshrsnnr20221206110408blog/sidminshgimriasimr20221206110420bai-blog/idtntnsmtgniiorndm20221207094956anh-trong-bai-blog/atistmssigsohmidis20230214150840cham-soc-toc-mong-cho-nam/drnoshssidamigdott20230214151343cham-soc-toc-mong-cho-nam-5.jpg\" alt=\"MÁi tóc mỏng và thưa ảnh hưởng rất nhiều đến sự tự tin của nam giới\" width=\"600\" height=\"450\"></figure><p>Mái tóc mỏng và thưa ảnh hưởng rất nhiều đến sự tự tin của nam giới</p><p><strong>Do các thành phần hormone trong cơ thể</strong></p><p>Nguyên nhân phổ biến nhất gây ra tình trạng tóc mỏng và thưa ở nam giới là do yếu tố di truyền học về hormone giới tính khiến cho tóc rụng theo các kiểu đặc trưng. Có một số kiểu hói đầu ở nam hay nữ mặc dù đã diễn ra trong một thời gian dài, khó có thể trị khỏi nhưng chắc chắn bạn vẫn có thể tìm ra một số biện pháp phù hợp giúp điều trị và kìm hãm lại quá trình rụng tóc. Ngoài ra, sự thay đổi hormone trong cơ thể đôi khi cũng có thể dẫn đến rụng tóc tạm thời. Vậy nên đừng bỏ qua việc kiểm tra các vấn đề về hormone trong cơ thể của mình để xem chúng có thể là lý do gây ra tình trạng rụng tóc của bạn hay không</p><p><strong>Tình trạng sức khỏe da đầu</strong></p><p>Trong một số trường hợp, các bệnh lý về da đầu cũng chính là nguyên nhân gây rụng tóc vì vậy điều trị các bệnh này sẽ giúp kìm hãm hoặc ngăn ngừa rụng tóc. Nếu như phát hiện bản thân mắc một trong những bệnh sau đây, bạn nên đến gặp bác sĩ để bắt đầu quá trình điều trị bệnh và giúp cho tóc mọc dày trở lại. Một trong những vấn đề quan trọng mà bạn cần quan tâm nhất đó là vấn đề về tuyến giáp, bởi nếu tuyến giáp không hoạt động bình thường, tóc có thể bị rụng một cách mất kiểm soát. Ngoài ra, tình trạng nhiễm trùng da đầu cũng có thể gây rụng tóc cục bộ và khiến cho mật độ tóc thưa và mỏng hơn.</p><p><strong>Tác dụng phụ của thuốc chữa bệnh</strong></p><p>Một số thuốc chữa bệnh có thể có tác dụng phụ đó là gây rụng tóc và làm cho mật độ tóc trở nên mỏng hơn. Vậy nên khi sử dụng các loại thuốc điều trị bệnh bạn nên tìm hiểu thật kỹ về thành phần và các tác dụng phụ của thuốc hoặc có thể trao đổi với bác sĩ để tìm sản phẩm thuốc thay thế. Sau đây là một vài thuốc điều trị bệnh sau có thể gây mỏng và rụng tóc:</p><p>+ Thuốc chữa ung thư</p><p>+ Thuốc điều trị trầm cảm</p><p>+ Thuốc điều trị các vấn đề tim mạch</p><p>+ Thuốc trị viêm khớp</p><p>+ Thuốc dành cho người bệnh huyết áp cao</p><p>Tình trạng căng thẳng mệt mỏi</p><p>Tình trạng rụng tóc và tóc mỏng cũng có thể xảy ra do gặp cú sốc về thể chất hay tinh thần hoặc do căng thẳng tâm ký. Bất kỳ loại căng thẳng tinh thần nào đối với cơ thể cũng có thể gây ra phản ứng thể chất và rụng tóc chính là biểu hiện thường thấy. Nếu bạn bị áp lực hay căng thẳng trong thời gian dài, hãy điều chỉnh lại các thói quen nghỉ ngơi và thư giãn của bản thân để có thể có một trạng thái tinh thần thỏa mái và ổn định nhất.</p><h2>2. Top 4 lời khuyên chăm sóc tóc mỏng cho nam</h2><p><strong>Cắt ngắn thường xuyên</strong><br>Nhiều người có suy nghĩ rằng tóc mỏng thì không nên cắt tỉa nhiều? Trên thực tế, các chuyên gia chăm sóc tóc lại khuyên điều ngược lại. Vaughn Acord - một chuyên gia về chăm sóc râu tóc ở nam chia sẻ: “Giữ cho tóc bạn ngắn sẽ khiến người khác không chú ý nhiều đến độ mỏng của nó”. Anh cũng nói thêm: “Mái tóc với độ ngắn vừa phải cũng giúp tóc bạn trông dày hơn”. Bạn nên thường xuyên đến gặp thợ làm tóc để có thể nhận được những tư vấn chuyên nghiệp và duy trì mái tóc với độ dài phù hợp để giúp tóc trông có sức sống hơn.<br>Thường xuyên mát xa da đầu</p><figure class=\"image\"><img style=\"aspect-ratio:600/343;\" src=\"https://assets-hebela.cdn.vccloud.vn/media/0/dtiitodsirsshrsnnr20221206110408blog/sidminshgimriasimr20221206110420bai-blog/idtntnsmtgniiorndm20221207094956anh-trong-bai-blog/atistmssigsohmidis20230214150840cham-soc-toc-mong-cho-nam/itiagrinrarstninid20230214151344cham-soc-toc-mong-cho-nam-6.jpg\" alt=\"chăm sóc tóc mỏng cho nam\" width=\"600\" height=\"343\"></figure><p>Massage da đầu trong khi gội giúp thư giãn và giúp tóc mọc nhanh hơn</p><p>Sau khi đã sở hữu một mái tóc cắt tỉa hợp lý, việc tiếp theo bạn nên làm đó là chăm sóc tóc và da đầu. Đối với nam giới có mái tóc mỏng, việc làm cho máu dưới lớp da đầu lưu thông tốt sẽ có tác dụng giúp cho tóc mọc nhanh và dày dặn hơn.</p><p>Lựa chọn dầu gội đầu phù hợp với tình trạng tóc cũng là một bước quan trọng trong quá trình chăm sóc tóc mỏng cho nam. Bạn nên bắt đầu bằng việc chọn những loại dầu gội có tác dụng ngăn rụng tóc và dưỡng tóc chắc khỏe, trong khi gội thì kết hợp mát xa da đầu lâu hơn và để cho tóc khô tự nhiên.</p><p><strong>Sử dụng ít sản phẩm tạo kiểu hơn</strong></p><p>Nếu không phải trường hợp bắt buộc thì hãy tránh xa các sản phẩm tạo kiểu cho tóc hay gel, sáp vuốt tóc. Thay vào đó, bạn có thể sử dụng các loại mousse hoặc kem mềm mịn để tạo độ dày cho tóc (molding paste và texture cream).</p><p>Chú ý đừng để sản phẩm tạo kiểu còn dính lại trên tóc và đi ngủ qua đêm. Thay vào đó, hãy vệ sinh tóc sạch sẽ trước khi đi ngủ. Bên cạnh đó, bạn cũng có thể tìm đến sự giúp đỡ từ thợ làm tóc để lựa chọn những sản phẩm dưỡng tóc lành tính và phù hợp với chất tóc mỏng.</p><p><strong>Hãy kiên nhẫn</strong></p><p>Nhiều chàng trai thường giải quyết vấn đề tóc mỏng bằng cách nối tóc và cấy tóc vì đây là cách nhanh và dễ dàng nhất. Điều này không hẳn là xấu nhưng đôi lúc lại không cần thiết và rất tốn kém. Tóc chúng ta thường mất khoảng từ 3 đến 6 tháng để được làm mới và phục hồi. Trong thời gian đó, bạn vẫn có thể lựa chọn để những kiểu tóc vừa phù hợp với mình lại vừa có thể che đi sự thưa mỏng của tóc, tạo cảm giác mái tóc bồng bềnh và dày dặn hơn. Lời khuyên ở đây đó là cần phải kiên nhẫn và chăm sóc mái tóc đúng cách.</p><h2>3. Top 3 sản phẩm kích thích mọc tóc tốt nhất khi chăm sóc tóc mỏng cho nam</h2><h3>3.1. Thuốc mọc tóc Maxxhair</h3><figure class=\"image\"><img style=\"aspect-ratio:600/600;\" src=\"https://assets-hebela.cdn.vccloud.vn/media/0/dtiitodsirsshrsnnr20221206110408blog/sidminshgimriasimr20221206110420bai-blog/idtntnsmtgniiorndm20221207094956anh-trong-bai-blog/atistmssigsohmidis20230214150840cham-soc-toc-mong-cho-nam/issitoontorisintsn20230214151343cham-soc-toc-mong-cho-nam-4.jpg\" alt=\" Thuốc mọc tóc Maxxhair\" width=\"600\" height=\"600\"></figure><p>Viên uống kích thích mọc tóc Maxxhair</p><p>Maxxhair là sản phẩm bổ sung vitamin, khoáng chất giúp hỗ trợ chăm sóc tóc mỏng cho nam, điều trị tình trạng rụng tóc, kích thích mọc tóc và nuôi dưỡng mái tóc từ sâu bên trong. Đồng thời, thuốc cũng có tác dụng giúp thải độc cho tóc sau khi sử dụng các loại hoá chất như thuốc nhuộm, thuốc ép hay uốn tóc,…&nbsp;</p><p>Với bảng thành phần chiết xuất từ các loại thảo dược tự nhiên, lành tính, Maxxhair là một trong những loại thực phẩm chức năng chăm sóc tóc được ưa chuộng và được nhiều người tin dùng nhất hiện nay. Để thuốc phát huy được hiệu quả tốt, bạn cần sử dụng đều đặn và kiên trì, sau khoảng 2 tuần bạn sẽ thấy được những thay đổi rõ rệt trên tóc.</p><p><strong>Thành phần chính và công dụng</strong></p><ul><li>Cao Hà thủ ô đỏ tốt cho máu, giúp tăng cường tuần hoàn máu đến da đầu, từ đó ngăn chặn tình trạng tóc rụng và sửa chữa lại những tổn thương của tóc.</li><li>Cao Hoàng cầm có công dụng chống oxy hóa mạnh, giúp cho mái tóc chắc khỏe và giảm gãy rụng.</li><li>Cao Thổ phục linh không chỉ bổ sung dưỡng chất tốt cho cơ thể mà còn có tác dụng ngăn ngừa da đầu bị nấm.</li><li>L-Arginine giúp các mạch máu ở da đầu được thư giãn và cải thiện lưu lượng máu lưu thông đến da đầu, mang lại một mái tóc chắc khỏe hơn, ngăn ngừa hư tổn và kích thích mọc tóc.</li><li>L-Carnitine fumarate có chức năng giảm lượng dầu nhờn tiết ra từ nang tóc, cung cấp các dưỡng chất cần thiết để nuôi dưỡng tóc, kích thích tóc mọc nhanh.</li></ul><p><strong>Đối tượng sử dụng</strong></p><p>Thuốc mọc tóc Maxxhair dùng được cho cả nam và nữ.&nbsp;</p><p>Sản phẩm phù hợp với những người bị rụng tóc nhiều do các yếu tố nội tiết, sử dụng các loại hoá chất có hại trên tóc hay các loại thuốc trị bệnh có tác dụng phụ ảnh hưởng đến quá trình phát triển của tóc, những người phải làm việc căng thẳng, thiếu dinh dưỡng,...&nbsp;</p><p>Ngoài ra, sản phẩm cũng giúp cải thiện tình trạng tóc thưa, chẻ ngọn, tóc nhanh bết do da đầu tiết nhiều dầu.&nbsp;</p><p>Điều trị và ngăn ngừa tình trạng hói đầu hoặc bệnh nhân bị rụng tóc sau thời gian làm hoá trị, xạ trị ung thư…</p><h3>3.2. Thuốc mọc tóc Bonihair</h3><figure class=\"image\"><img style=\"aspect-ratio:600/600;\" src=\"https://assets-hebela.cdn.vccloud.vn/media/0/dtiitodsirsshrsnnr20221206110408blog/sidminshgimriasimr20221206110420bai-blog/idtntnsmtgniiorndm20221207094956anh-trong-bai-blog/atistmssigsohmidis20230214150840cham-soc-toc-mong-cho-nam/rmssgtiihisianasgn20230214151343cham-soc-toc-mong-cho-nam-3.jpg\" alt=\"Thực phẩm chức năng Bonihair giúp tóc mọc nhanh hơn\" width=\"600\" height=\"600\"></figure><p>Thực phẩm chức năng Bonihair giúp tóc mọc nhanh hơn</p><p>Bonihair là thương hiệu chăm sóc tóc có nguồn gốc từ Mỹ. Với chiết xuất thành phần từ nguyên liệu thiên nhiên kết hợp với sử dụng công nghệ tiên tiến hiện đại, sản phẩm kích thích mọc tóc Bonihair có tác dụng hỗ trợ điều trị các trường hợp tóc mỏng, thưa, bạc sớm và kích thích tóc mọc nhanh hơn, mang lại cho bạn có một mái tóc khỏe đẹp, óng ả.<br><strong>Thành phần chính và công dụng</strong><br>&nbsp;</p><ul><li>Catalase có tác dụng chống oxy hóa, phân hủy phân tử H202 - phần tử gây ra tình trạng bạc tóc, giúp ngăn ngừa và đẩy lùi quá trình lão hóa của tóc.</li><li>Acid folic hỗ trợ tóc phát triển nhanh hơn, kích thích tóc mọc dày, dài hơn.</li><li>Hà thủ ô giúp làm đen tóc dành cho người bị bạc tóc hiệu quả.</li><li>Quả cọ lùn hỗ trợ kích thích mọc tóc, nuôi dưỡng mái tóc khỏe mạnh hơn. Ngoài ra, loại quả này còn có khả năng ngăn ngừa tình trạng gàu ngứa và hạn chế rụng tóc.</li><li>Biotin kích thích tóc mọc dày và nhanh hơn.</li><li>PABA giúp khôi phục màu tóc và kích thích quá trình phát triển của tóc.&nbsp;</li><li>Cỏ roi ngựa hỗ trợ phát triển nang lông và tăng tuần hoàn máu ở da đầu. Ngoài ra, cỏ roi ngựa cũng có tác dụng chống oxy hóa nên có thể kích thích quá trình &nbsp;mọc tóc, giúp tóc giảm rụng và mọc dày hơn.</li><li>Rễ cây tầm ma hỗ trợ kích thích quá trình mọc tóc nhanh chóng.</li><li>Cỏ lúa mạch vừa giúp khôi phục màu tóc vừa kích thích mọc tóc, cung cấp các dưỡng chất, vitamin và khoáng chất cần thiết cho tóc luôn khỏe mạnh.</li></ul><p><strong>Đối tượng sử dụng</strong><br>&nbsp;</p><ul><li>Những người bị rụng tóc do tuổi tác hoặc rụng tóc sau sinh.</li><li>Những người có tóc bạc sớm.</li><li>Những người muốn phục hồi màu tóc tự nhiên.</li></ul><h3>3.3. Thuốc kích mọc tóc Qik Hair For Men</h3><figure class=\"image\"><img style=\"aspect-ratio:600/600;\" src=\"https://assets-hebela.cdn.vccloud.vn/media/0/dtiitodsirsshrsnnr20221206110408blog/sidminshgimriasimr20221206110420bai-blog/idtntnsmtgniiorndm20221207094956anh-trong-bai-blog/atistmssigsohmidis20230214150840cham-soc-toc-mong-cho-nam/sthttsrssiottmahtd20230214151344cham-soc-toc-mong-cho-nam-7.jpg\" alt=\"Thuốc trị tóc mỏng và thưa ở nam\" width=\"600\" height=\"600\"></figure><p>Thuốc trị tóc mỏng và thưa ở nam</p><p>Qik Hair For Men là sản phẩm chăm sóc tóc chuyên biệt dành cho nam giới, có tác dụng &nbsp;kích thích mọc tóc, cải thiện tình trạng tóc mỏng và thưa. Thương hiệu chăm sóc tóc có nguồn gốc từ Mỹ. Thành phần chính của sản phẩm là các tinh chất có nguồn gốc 100% từ thiên nhiên có tác dụng cân bằng nội tiết tố, thúc đẩy tế bào mầm tóc phát triển, từ đó giúp giảm rụng tóc, ngăn ngừa tình trạng hói đầu và kích thích tóc mọc chắc khỏe hơn.</p><p>Thành phần chính và công dụng</p><ul><li>Cynatine có khả năng cân bằng các tế bào thần kinh nội tiết nam, làm giảm hoạt động của men 5 – alpha – reductase (5AR) và làm gián đoạn quá trình sản sinh DHT, &nbsp;hạn chế tình trạng tăng hormone quá cao ở da đầu của nam giới. Từ đó, các tế bào mầm tóc sẽ được bảo vệ và phát triển tốt hơn, giảm tình trạng rụng tóc, hỗ trợ mái tóc mọc dày và chắc khỏe hơn.</li><li>Aged Black Garlic Extract giúp cung cấp các dưỡng chất thiết yếu, tăng cường sức đề kháng cho cơ thể.</li><li>Methyl Sulfonyl Methane (MSM) tăng cường keratin, một dưỡng chất cần thiết cho tóc, giúp tóc giảm gãy rụng và chắc khỏe hơn.</li><li>Biotin có tác dụng cải thiện kết cấu của keratin, ngăn ngừa rụng tóc và kích thích tóc mọc chắc khỏe.</li><li>Các loại vitamin B1, B5, D3 và các khoáng chất khác như kẽm, zinc, omega-3, L-Cystine giúp cung cấp dưỡng chất cần thiết để nuôi dưỡng nang tóc từ sâu bên trong.</li></ul><p>Đối tượng sử dụng</p><ul><li>Thích hợp sử dụng cho nam giới trên 18 tuổi.</li><li>Phù hợp với mái tóc nam rụng nhiều hoặc có nguy cơ hói đầu do các nguyên nhân khác nhau như: căng thẳng (stress), rối loạn thần kinh nội tiết, chế độ ăn uống thiếu dinh dưỡng, tác dụng phụ của thuốc, hóa chất...</li><li>Khuyên dùng để chăm sóc mái tóc trước và sau khi sử dụng hóa chất ( sau khi uốn, duỗi, nhuộm…) hoặc điều trị bệnh bằng phương pháp hóa trị, xạ trị.</li></ul><h2>4. Top 5 kiểu tóc đẹp khi chăm sóc tóc mỏng cho &nbsp;nam tóc thưa, mỏng</h2><p><strong>Tóc tỉa layer cắt ngắn 2 bên mái</strong></p><p>Đây là kiểu tóc sẽ giúp các bạn nam trở nên thu hút và hấp dẫn hơn với hai bên mái được tỉa gọn gàng và phần mái phía trước tạo phồng để che đi khuyết điểm là mái tóc thưa và mỏng. Đây cũng là một sự lựa chọn hoàn hảo dành cho những anh chàng có mái tóc mỏng với một mái tóc vừa thời trang lại vừa nam tính.</p><p><strong>Kiểu tóc vuốt ngược</strong></p><p>Tóc vuốt ngược hay còn được gọi là Undercut là kiểu tóc đang rất hot hiện nay. Đây là kiểu tóc phù hợp với những người có mái tóc thưa ở phần đỉnh và phía sau đầu. Với kiểu tóc này, bạn chỉ cần một động tác vuốt ngược tóc và cố định lại bằng gel hoặc sáp là sẽ có ngay một mái tóc đẹp.</p><p><strong>Tóc uốn xoăn</strong></p><p>Với kiểu tóc uốn xoăn, mái tóc của các chàng trai không chỉ trở lên bồng bềnh, dày dặn hơn &nbsp;mà đồng thời còn mang một vẻ đẹp thanh lịch, lãng tử hút mắt người nhìn.</p><p><strong>Tóc uốn chia 7:3</strong></p><p>Tóc uốn sẽ giúp tạo độ phồng cho mái tóc, che đi phần tóc mỏng và thưa của các bạn nam. &nbsp;Nếu như kết hợp tóc uốn với chia ngôi 7:3 sẽ tạo thêm được nét sáng sủa, lịch lãm, nam tính và cũng không kém phần năng động, trẻ trung.</p><p><strong>Kiểu tóc ngắn nam Pompadour</strong></p><p>Tóc ngắn Pompadour chính là kiểu giúp tăng thêm độ phồng của mái tóc giúp cho các bạn nam sở hữu nét đẹp quyến rũ và lịch sự hơn.</p><p>Qua bài viết trên, Hebela đã giới thiệu đến bạn những phương pháp cũng như lời khuyên để chăm sóc tóc mỏng cho nam. Mong rằng bài viết sẽ có ích với các bạn để có thể có được mái tóc dày mượt và khỏe đẹp như mong muốn. Các bạn có thể truy cập Hebela.com để đọc thêm nhiều bài viết khác về chăm sóc sức khỏe và sắc đẹp nhé.</p>', 2, 0, 1),
-(4, 'Cách chăm sóc tóc đẹp cho phái nữ dịp Tết 2024', 'momo-upload-api-200115151841-637146983219938251.jpg', '2023-11-21 13:18:17', '2023-11-21 13:18:17', 11, 'Tết là thời điểm các bạn gái làm đẹp lại mái tóc của mình. Để có mái tóc đẹp tự nhiên trong mọi cuộc vui ngày tết bạn phải biết cách chăm sóc tóc của mình.', '<h2><strong>Cách giúp tóc giữ nếp lâu</strong></h2><p>Tết các cô nàng rất thích tạo những kiểu tóc mới để đi chơi xuân cùng bạn bè. Chăm sóc tóc uốn giữ nếp bạn phải lưu ý chọn dầu gội dành riêng cho tóc uốn và chọn mua kem dưỡng tóc bổ sung dưỡng chất cho tóc được khỏe khoắn. Khi gội hoặc sấy cũng nên thực hiện nhẹ nhàng, tránh dùng khăn vặn tóc hoặc để tóc dưới nhiệt độ cao của máy sấy.</p><figure class=\"image\"><img style=\"aspect-ratio:700/467;\" src=\"https://homepage.momocdn.net/blogscontents/momo-upload-api-200115151841-637146983219938251.jpg\" alt=\"Chăm sóc tóc uống\" width=\"700\" height=\"467\"></figure><p><i>Chăm sóc tóc uốn</i></p><h2><strong>Gội đầu đúng cách</strong></h2><p>Để có mái tóc đẹp ngày tết cho phái nữ, các bạn cần phải gội đầu đúng cách. Tùy vào loại tóc mà bạn gội nhiều hay ít lần trong tuần. Trước khi gội hãy dùng lược thưa chải qua để tóc bớt rối. Khi gội dùng tay cào nhẹ từ trên xuống dưới sau đỏ xả lại thật kỹ. Tóc nữ thường dài và uốn nhiều kiểu khác nhau nên cần giữ tóc sạch để tránh nấm hoặc gàu sẽ làm mất thẩm mỹ mái tóc.</p><p><a href=\"https://momo.vn/blog/nhung-kieu-toc-dep-choi-tet-2020-la-con-gai-phai-thu-c103dt61\"><strong>Những kiểu tóc đẹp chơi tết 2020 là con gái phải thử</strong></a></p><p>Một điều quan trọng để bảo vệ tóc nữ trong những ngày tết là không nên thường xuyên gội đầu bằng nước nóng. Gội đầu quá nhiều lần và gội bằng nước nóng sẽ khiến tóc bạn nhanh chóng bị khô xơ, gãy rụng. Bởi da đầu có những tuyến dầu giúp tóc khỏe mạnh tự nhiên, nếu gặp nước nóng hoặc bị chà xát nhiều lần, lượng dầu trong tóc sẽ trôi đi không được giữ lại để bảo vệ tóc. Đây là nguyên nhân là cho tóc không được óng mượt.</p><figure class=\"image\"><img style=\"aspect-ratio:700/467;\" src=\"https://homepage.momocdn.net/blogscontents/momo-upload-api-200115151938-637146983789636144.jpg\" alt=\"Bạn đã gội đầu đúng cách chưa?\" width=\"700\" height=\"467\"></figure><p><i>Gội đầu đúng cách</i></p><h2><strong>Dùng dầu xả để chăm sóc tóc</strong></h2><p>Dùng dầu xả sau khi gội sẽ giúp tóc khỏe hơn, hạn chế bị khô. Để chăm sóc tóc tốt nhất bạn nên dành khoảng 5 phút để các dưỡng chất trong dầu xả ngắm vào tóc. Để chăm sóc tóc tốt hơn, bạn nên dành ít nhất 1 lần trong tuần để dùng kem ủ để tóc được nuôi dưỡng tốt nhất cho tóc.</p><figure class=\"image\"><img style=\"aspect-ratio:700/467;\" src=\"https://homepage.momocdn.net/blogscontents/momo-upload-api-200115152315-637146985952035600.jpg\" alt=\"Dùng kem xả để tóc được khỏe mạnh\" width=\"700\" height=\"467\"></figure><p><i>Dùng kem xả cho tóc</i></p><h2><strong>Chải tóc đúng cách</strong></h2><p>Những ngày tết các chị em đi chơi thường mang theo đồ trang điểm trong đó luôn có chiếc lược. Thỉnh thoảng các bạn lại mang lược ra để chải lại tóc vì sợ tóc rối trông không còn đẹp nữa. Việc chải tóc thường xuyên sẽ làm tóc bị hư tổn đấy. Lực ma sát của lược sẽ làm các tuyến dầu hoạt động mạnh khiến tóc dễ bệch dính, kém xinh.</p><p>Bên cạnh đó, khi chải tóc cũng phải đúng cách để không làm tóc bị tổn thương. Tránh chải mạnh từ chân tóc ra nhất là khi tóc đang rối. Bạn chỉ nên nhẹ nhàng chải từ ngọn tóc vào chân tóc. Chọn lược mềm thưa và thường xuyên vệ sinh chiếc lược của mình nhé.</p><figure class=\"image\"><img style=\"aspect-ratio:700/469;\" src=\"https://homepage.momocdn.net/blogscontents/momo-upload-api-200115160648-637147012085531205.jpg\" alt=\"Chải tóc đúng cách để giảm gãy rụng bạn nhé\" width=\"700\" height=\"469\"></figure><p><i>Chải tóc đúng cách để giảm gãy rụng bạn nhé&nbsp;</i></p><h2><strong>Bảo vệ tóc dưới ánh nắng mặt trời</strong></h2><p>Những ngày xuân đi đâu cũng đẹp, đi đâu cũng muốn chụp hình “tự sướng”. Để có những tấm hình đẹp các bạn gái không ngại “hy sinh” nhan sắc đầu trần khoe dáng. Tóc tiếp xúc trực tiếp dưới ánh nắng mặt trời sẽ bị hư tổn rất nhiều. Giống như da hay mắt bạn thường bảo vệ dưới nắng nhưng lại ít quan tâm đến tóc. Ánh nắng mặt trời chiếu vào tóc sẽ là xảy ra các phản ứng hóa học làm tóc bị khô, chẻ ngọn, đổi màu.</p><p>Vì vậy khi đi chơi những ngày tết, các quý cô hãy nhớ bảo vệ mái tóc của mình bằng việc đội nón rộng vành, dùng các loại kem dành riêng cho tóc. Bạn cũng nên hạn chế các hoạt động mạnh dễ ra mồ hôi để tóc không bị nhờn trong những ngày tết.</p><figure class=\"image\"><img style=\"aspect-ratio:700/700;\" src=\"https://homepage.momocdn.net/blogscontents/momo-upload-api-200115160737-637147012575606008.jpg\" alt=\"Đừng quên bảo vệ tóc khi ra nắng\" width=\"700\" height=\"700\"></figure><p><i>Bảo vệ tóc dưới nắng</i></p><h2><strong>Cắt tỉa tóc khô xơ</strong></h2><p>Với chị em thích làm đẹp thì thường xuyên thay đổi kiểu tóc, màu tóc. Điều này sẽ làm tóc yếu đi và xuất hiện tóc xơ. Nhưng lạm dụng việc uốn hoặc nhuộm để cho khuyết điểm càng làm tóc bạn tổn hại nhiều thêm. Để giữ tóc đẹp mà không phải sử dụng nhiều hóa chất, bạn hãy tỉa bớt các phần bị xơ hay chẻ ngọn. Cách này tóc không bị tổn thương và kích thích tóc mọc nhiều hơn mà mái tóc vẫn đẹp tự nhiên.</p><h2><strong>Không nên thường xuyên cột chặt hoặc kẹp tóc</strong></h2><p>Nếu bạn thường xuyên cột chặt hoặc kẹp tóc sẽ làm tóc bị gãy không giữ được nếp như ban đầu. Điều này các bà nội trợ hay mắc phải hoặc những người làm việc ngoài trời, môi trường nóng bức. Để có mái tóc đẹp trong ngày tết thì nên hạn chế làm tóc bị bó chặt mà dành không gian để tóc “thở”. Nhớ chọn cho mình các loại kẹp tóc không quá buộc chặt hoặc sử dụng những kiểu tóc nhẹ nhàng hơn như dùng băng đô, cài để giữ tóc.</p><figure class=\"image\"><img style=\"aspect-ratio:700/700;\" src=\"https://homepage.momocdn.net/blogscontents/momo-upload-api-200115160822-637147013020763566.jpg\" alt=\"Tóc cần được thả lỏng\" width=\"700\" height=\"700\"></figure><p><i>Tóc cần được thả lỏng</i></p><h2><strong>Bảo vệ tóc nhuộm đi chơi ngày tết</strong></h2><p>Với các bạn nữ thích nhuộm tóc thì cần chăm sóc tóc kỹ hơn trong những ngày tết để bảo vệ màu nhuộm đẹp như ban đầu. Đầu tiên bạn không được dùng máy sấy tóc để làm khô khi tóc đang ướt. Hơi nóng của máy sấy sẽ làm bong tróc lớp sừng bảo vệ tóc khiến tóc nhanh chóng bị khô và gãy. Nếu muốn làm khô tóc thì nên chọn máy có chế độ sấy lạnh hoặc hong tóc qua gió trước khi dùng máy sấy lại.</p><p>Bạn phải hết sức lưu ý khi đi bơi nhé. Màu tóc nhuộm có thể sẽ dễ bị phai màu khi tiếp xúc trực tiếp với clo trong nước. Trong các hồ bơi người ta thường dùng lượng clo cực lớn để tẩy nước. Khi đi bơi bạn phải bảo vệ tóc không thắm nước nếu không clo trong nước hồ bơi sẽ tàn phá tóc bạn một cách không thương tiếc.</p><figure class=\"image\"><img style=\"aspect-ratio:600/750;\" src=\"https://homepage.momocdn.net/blogscontents/momo-upload-api-200115160844-637147013249118263.jpeg\" alt=\"Tóc nhuộm dễ hư tổn hơn nên rất cần bạn chăm chút bảo vệ\" width=\"600\" height=\"750\"></figure><p><i>Tóc nhuộm cần được bảo vệ tốt</i></p><h2><strong>Dùng mặt nạ cho tóc</strong></h2><p>Cũng giống như da mặt hay cơ thể, bạn cũng cần thường xuyên dùng mặt nạ để chăm sóc tóc. Nhất là những ngày tết, do bạn đi chơi nhiều và dùng nhiều hóa chất nên tóc dễ bị khô. Các loại dưỡng chất có lợi cho tóc như trứng, dầu dừa, dầu olive, mật ong, chuối, bơ… Các dưỡng chất có trong những sản phẩm này có tác dụng giúp tóc dưỡng ẩm, nhanh phục hồi sau hư tổn.</p><figure class=\"image\"><img style=\"aspect-ratio:700/466;\" src=\"https://homepage.momocdn.net/blogscontents/momo-upload-api-200115161527-637147017276243892.jpg\" alt=\"Chăm sóc tóc bằng mặt nạ\" width=\"700\" height=\"466\"></figure><p><i>Chăm sóc tóc bằng mặt nạ</i></p><p><i><strong>Hãy thực hiện các cách chăm sóc tóc này để có mái tóc đẹp tự nhiên, khỏe mạnh đi chơi ngày tết. “Cái răng cái tóc là gốc con người”, một mái tóc đẹp sẽ giúp bạn tự tin hơn mọi lúc mọi nơi.</strong></i></p>', 3, 0, 1);
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `post_categories`
---
-
-CREATE TABLE `post_categories` (
-  `id` int NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `stt` int NOT NULL COMMENT 'Số thứ tự',
-  `status` int NOT NULL COMMENT '0 là "ẩn" 1 là "hiện"',
-  `deleted` int NOT NULL COMMENT '0 là tồn tại 1 là đã xóa'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Đang đổ dữ liệu cho bảng `post_categories`
---
-
-INSERT INTO `post_categories` (`id`, `name`, `stt`, `status`, `deleted`) VALUES
-(1, 'Chăm Sóc Tóc', 2, 1, 0),
-(2, 'Men', 1, 1, 0),
-(3, 'Women', 1, 1, 0);
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `product`
+-- Table structure for table `product`
 --
 
 CREATE TABLE `product` (
@@ -12218,12 +12164,12 @@ CREATE TABLE `product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `product`
+-- Dumping data for table `product`
 --
 
 INSERT INTO `product` (`id`, `name`, `price`, `discount`, `img`, `create_at`, `update_at`, `description`, `view`, `id_cate`, `deleted`, `status`) VALUES
 (1, 'NIKE JORDAN', 3000000, 2800000, 'nike 1.jpg', '0000-00-00 00:00:00', '2023-12-03 13:14:58', '', 110, 1, 0, 1),
-(2, ' NIKE JORDAN', 3000000, 2600000, 'nike 2.jpg', '0000-00-00 00:00:00', '2023-12-03 13:15:05', '', 143, 1, 0, 1),
+(2, ' NIKE JORDAN', 3000000, 2600000, 'nike 2.jpg', '0000-00-00 00:00:00', '2023-12-03 13:15:05', '', 156, 1, 0, 1),
 (3, ' NIKE JORDAN', 3000000, 2800000, 'nike 3.jpg', '0000-00-00 00:00:00', '2023-12-03 13:15:08', '', 7, 1, 0, 1),
 (4, 'NIKE AIR FORCE 1 CUSTOM ', 5000000, 4500000, 'nike 4.jpg', '0000-00-00 00:00:00', '2023-12-03 13:15:11', '', 8, 1, 0, 1),
 (5, 'NIKE AIR FORCE 1 CUSTOM ', 3000000, 2800000, 'nike 5.jpg', '0000-00-00 00:00:00', '2023-12-03 13:13:41', '', 1, 1, 0, 1),
@@ -12246,12 +12192,14 @@ INSERT INTO `product` (`id`, `name`, `price`, `discount`, `img`, `create_at`, `u
 (22, 'GUCCI MLB SPACEL', 58000000, 55000000, 'MLB4.jpg', '0000-00-00 00:00:00', '2023-12-03 13:23:02', '', 2, 4, 0, 1),
 (23, 'MLB BASIC', 590000, 540000, 'MLB5.jpg', '0000-00-00 00:00:00', '2023-12-03 13:23:52', '', 0, 4, 0, 1),
 (24, 'MLB BASIC NỮ', 3500000, 3090000, 'MLB6.jpg', '0000-00-00 00:00:00', '2023-12-03 13:24:05', '', 0, 4, 0, 1),
-(25, 'Mane Man Matte Paste', 550000, 480000, 's25.png', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', 0, 5, 1, 1);
+(255, 'dat', 300000, 123131, 'Screenshot (2).png', '2023-12-06 20:36:25', '2023-12-06 20:36:25', '', NULL, 1, 1, 1),
+(256, 'dat1', 13131, 1000, 'Screenshot 2023-08-09 135726.png', '2023-12-06 20:37:11', '2023-12-06 20:37:11', '', NULL, 2, 1, 1),
+(257, 'dat1', 13131, 1000, 'Screenshot 2023-09-06 123325.png', '2023-12-06 22:11:15', '2023-12-06 22:11:15', '', NULL, 3, 0, 1);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `status`
+-- Table structure for table `status`
 --
 
 CREATE TABLE `status` (
@@ -12260,7 +12208,7 @@ CREATE TABLE `status` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `status`
+-- Dumping data for table `status`
 --
 
 INSERT INTO `status` (`id`, `name`) VALUES
@@ -12270,7 +12218,7 @@ INSERT INTO `status` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `usr`
+-- Table structure for table `usr`
 --
 
 CREATE TABLE `usr` (
@@ -12287,25 +12235,26 @@ CREATE TABLE `usr` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `usr`
+-- Dumping data for table `usr`
 --
 
 INSERT INTO `usr` (`username`, `pass`, `name`, `img`, `email`, `SDT`, `role`, `create_at`, `update_at`, `deleted`) VALUES
 ('admin', '$2y$10$SLMZSJDJ7D/tZCEDK.w9vuWzEjPiEKaEvVlTcK8Hcjjf4Be/AJf7O', 'admin', 'user.png', 'baontpc06884@fpt.edu.vn', '0374977918', 0, '2023-12-03 22:01:50', '2023-12-03 22:01:50', 1),
-('thanhbao', '$2y$10$d2O9W9IEAkQj8HkNCaOB/Otj/WPBqWuJGgAaQ1/KsUifYXLdW48Ju', 'thanhbao', 'thanhbao-2.jpg', 'baontpc06884@fpt.edu.vn', '0374977918', 1, '2023-12-01 23:49:15', '2023-12-01 23:49:46', 1);
+('thanhbao', '$2y$10$d2O9W9IEAkQj8HkNCaOB/Otj/WPBqWuJGgAaQ1/KsUifYXLdW48Ju', 'thanhbao', 'thanhbao-2.jpg', 'baontpc06884@fpt.edu.vn', '0374977918', 1, '2023-12-01 23:49:15', '2023-12-01 23:49:46', 1),
+('vandat', '$2y$10$Z2ZLin7qMfPWpO2cvQhY5OlK/pm0eYslNn82dlJZJGmnQDs66u5ce', 'Đạt', 'vandat-Screenshot (2).png', 'buivandat2503@gmail.com', '0931778384', 1, '2023-12-07 10:23:59', '2023-12-07 10:23:59', 1);
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `categories`
+-- Indexes for table `categories`
 --
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `cmt`
+-- Indexes for table `cmt`
 --
 ALTER TABLE `cmt`
   ADD PRIMARY KEY (`id`),
@@ -12313,38 +12262,38 @@ ALTER TABLE `cmt`
   ADD KEY `fk_cmt_usr` (`id_user`);
 
 --
--- Chỉ mục cho bảng `devvn_quanhuyen`
+-- Indexes for table `devvn_quanhuyen`
 --
 ALTER TABLE `devvn_quanhuyen`
   ADD PRIMARY KEY (`maqh`);
 
 --
--- Chỉ mục cho bảng `devvn_tinhthanhpho`
+-- Indexes for table `devvn_tinhthanhpho`
 --
 ALTER TABLE `devvn_tinhthanhpho`
   ADD PRIMARY KEY (`matp`);
 
 --
--- Chỉ mục cho bảng `devvn_xaphuongthitran`
+-- Indexes for table `devvn_xaphuongthitran`
 --
 ALTER TABLE `devvn_xaphuongthitran`
   ADD PRIMARY KEY (`xaid`);
 
 --
--- Chỉ mục cho bảng `galery`
+-- Indexes for table `galery`
 --
 ALTER TABLE `galery`
   ADD PRIMARY KEY (`id`),
   ADD KEY `fk_gale_prod` (`id_prod`);
 
 --
--- Chỉ mục cho bảng `orders`
+-- Indexes for table `orders`
 --
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `order_details`
+-- Indexes for table `order_details`
 --
 ALTER TABLE `order_details`
   ADD PRIMARY KEY (`id`),
@@ -12352,120 +12301,96 @@ ALTER TABLE `order_details`
   ADD KEY `fk_orderdetails_prod` (`id_prod`);
 
 --
--- Chỉ mục cho bảng `post`
---
-ALTER TABLE `post`
-  ADD PRIMARY KEY (`id`);
-
---
--- Chỉ mục cho bảng `post_categories`
---
-ALTER TABLE `post_categories`
-  ADD PRIMARY KEY (`id`);
-
---
--- Chỉ mục cho bảng `product`
+-- Indexes for table `product`
 --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`id`),
   ADD KEY `fk_prod_cate` (`id_cate`);
 
 --
--- Chỉ mục cho bảng `status`
+-- Indexes for table `status`
 --
 ALTER TABLE `status`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `usr`
+-- Indexes for table `usr`
 --
 ALTER TABLE `usr`
   ADD PRIMARY KEY (`username`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `categories`
+-- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT cho bảng `cmt`
+-- AUTO_INCREMENT for table `cmt`
 --
 ALTER TABLE `cmt`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT cho bảng `galery`
+-- AUTO_INCREMENT for table `galery`
 --
 ALTER TABLE `galery`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `orders`
+-- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
--- AUTO_INCREMENT cho bảng `order_details`
+-- AUTO_INCREMENT for table `order_details`
 --
 ALTER TABLE `order_details`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
--- AUTO_INCREMENT cho bảng `post`
---
-ALTER TABLE `post`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT cho bảng `post_categories`
---
-ALTER TABLE `post_categories`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT cho bảng `product`
+-- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=255;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=258;
 
 --
--- AUTO_INCREMENT cho bảng `status`
+-- AUTO_INCREMENT for table `status`
 --
 ALTER TABLE `status`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `cmt`
+-- Constraints for table `cmt`
 --
 ALTER TABLE `cmt`
   ADD CONSTRAINT `fk_cmt_prod` FOREIGN KEY (`id_prod`) REFERENCES `product` (`id`),
   ADD CONSTRAINT `fk_cmt_usr` FOREIGN KEY (`id_user`) REFERENCES `usr` (`username`);
 
 --
--- Các ràng buộc cho bảng `galery`
+-- Constraints for table `galery`
 --
 ALTER TABLE `galery`
   ADD CONSTRAINT `fk_gale_prod` FOREIGN KEY (`id_prod`) REFERENCES `product` (`id`);
 
 --
--- Các ràng buộc cho bảng `order_details`
+-- Constraints for table `order_details`
 --
 ALTER TABLE `order_details`
   ADD CONSTRAINT `fk_orderdetails_orders` FOREIGN KEY (`id_order`) REFERENCES `orders` (`id`),
   ADD CONSTRAINT `fk_orderdetails_prod` FOREIGN KEY (`id_prod`) REFERENCES `product` (`id`);
 
 --
--- Các ràng buộc cho bảng `product`
+-- Constraints for table `product`
 --
 ALTER TABLE `product`
   ADD CONSTRAINT `fk_prod_cate` FOREIGN KEY (`id_cate`) REFERENCES `categories` (`id`);
